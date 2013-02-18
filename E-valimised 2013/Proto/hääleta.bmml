@@ -1,0 +1,39 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="898" measuredH="411" mockupW="859" mockupH="381">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::FieldSet" x="39" y="30" w="859" h="381" measuredW="200" measuredH="170" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>H%E4%E4leta</text>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::ComboBox" x="55" y="60" w="-1" h="-1" measuredW="76" measuredH="24" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Piirkond</text>
+      </controlProperties>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::List" x="56" y="109" w="-1" h="-1" measuredW="100" measuredH="126" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Esimene%20Kandidaat%0ASelles%20Piirkonnas%0AKolmas%20Kandidaat%0AJa%20Nii%20Edasi</text>
+      </controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::Button" x="64" y="374" w="-1" h="-1" measuredW="78" measuredH="27" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Anna%20h%E4%E4l</text>
+      </controlProperties>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::Image" x="273" y="61" w="134" h="142" measuredW="77" measuredH="79" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Kandidaadi%20pilt</text>
+      </controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::Label" x="456" y="62" w="-1" h="-1" measuredW="54" measuredH="21" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>T%E4is%20Nimi</text>
+      </controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::Paragraph" x="456" y="127" w="200" h="134" measuredW="200" measuredH="80" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Tekst%2C%0A%20%0Amis%20kandidaat%20on%20enda%20kohta%20kirjutanud.%0A%20%0A...</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
