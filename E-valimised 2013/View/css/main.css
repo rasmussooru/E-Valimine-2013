@@ -17,7 +17,8 @@
     }
 
 #inner
-	{   
+	{
+	position: fixed;
 	background-color: #FFF;
 	color: #595959;
 	padding: 25px;
@@ -29,7 +30,7 @@
 	position: fixed;
 	font-size:0.75em; 
 	width:100px; 
- 
+ 	cursor: pointer;
 	left: 410px;
 	top: 30%;
 	width: 8em;
@@ -53,7 +54,6 @@ ul.top-level li {
 
 #navigation a {
  color: #000000;
- cursor: pointer;
  display:block;
  height:25px;
  line-height: 25px;
