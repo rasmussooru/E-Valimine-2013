@@ -1,84 +1,104 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        
-        <title>Kandideeri</title>
-        
-        <meta name="description" content="E-Valimine 2013">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Kandidaadid</title>
+<link href="view/css/main.css" rel="stylesheet" type="text/css" />
 
-        <link rel="stylesheet" href="view/css/main.css">
-      
-    </head>
+
+</head>
 <body>
+<div id="keha">
+<! --------------Ülemine osa, siia saab logo panna vajadusel----------->
+  <div id="top">
+       
+  </div> 
+ <! --------------Keskmine osa----------->
+<div id="middle">
 
-	<div id="wrapper">
 	
-		<div id="navigation">
+<! --------------Keskmise ala vasak osa----------->
+    <div id="left">
+        <div id="info">                   
+            <a href="info.html">Info</a>                          
+                                               
+        </div>
+        <div id="haaleta">
+              <a href="haaleta.html">H&auml;&auml;leta</a>                          
+        </div>
+        <div id="kandideeri">                   
+             <a href="kandideeri.html">Kandideeri</a>                          
+                                               
+        </div>
+        <div id="kandidaadid">                   
+            <a href="kandidaadid.html">Kandidaadid</a>                          
+                                               
+        </div>
+        <div id="reaalaeg">                   
+             <a href="reaalaeg.html">Reaalaeg</a>                         
+                                               
+        </div>
+        <div id="statistika">                   
+             <a href="statistika.html">Statistika</a>                          
+                                               
+        </div>
+    </div> 
+     <! --------------Põhi osa----------->
+    <div id="pohi">
+    	<h1>E-valimised 2013</h1>
+    <div id="inner">
+         <div id="registration">
+<form class="contact_form" action="#" method="post" name="contact_form">
+    <ul>
+         <li>
+              <h2>Kandideeri</h2>
+             <span class="required_notification">* Vajalikud väljad</span>
+         </li>
+         <li>
+             <label for="firstName">Eesnimi:</label>
+             <input type="text" placeholder="Eesnimi" required maxlength="32" />
+         </li>
+         <li>
+             <label for="lastName">Perenimi:</label>
+             <input type="text" placeholder="Perenimi" required maxlength="32" />
+         </li>
+         <li>
+             <label for="email">Email:</label>
+             <input type="email" name="email" placeholder="nimi@domeen.ee" required maxlength="32" />
+             <span class="form_hint">Näiteks: "nimi@domeen.ee"</span>
+         </li>
+         <li>
+             <label for="tel">Telefon</label>
+             <input type="tel" name="tel" placeholder="1234 5678" required maxlength="15" />
+             <span class="form_hint">Näiteks: "1337"</span>
+         </li>
+         <li>
+             <label for="website">Asutuse veebileht:</label>
+             <input type="url" name="website" placeholder="http://kodulehekülg.ee" required pattern="(http|https)://.+" maxlength="40"/>
+             <span class="form_hint">Näiteks: "http://kodulehekülg.ee"</span>
+         </li>
+         <li>
+             <label for="message">Enesetutvustus</label>
+             <textarea name="message" cols="40" rows="6" required maxlength="400" placeholder="Maksimaalselt 400 tähemärki..."></textarea>
+            
+         </li>
+         <liButtons>
+             <button class="submit" type="submit">Lae pilt ...</button>
+             <button class="submit" type="submit">Registeeri</button>
+         </liButtons>
+     </ul>
+</form>	
+         </div>
+</div>
+    	
+
 		
-			  <ul class="top-level">
-			
-			<li><a href="info.html">Info</a></li>
-       			<li><a href="haaleta.html">H&auml;&auml;leta</a></li>
-       			<li><a href="kandideeri.html">Kandideeri</a></li>
-       			<li><a href="kandidaadid.html">Kandidaadid</a></li>
-        		<li><a href="reaalaeg.html">Reaalaeg</a></li>
-        		<li><a href="statistika.html">Statistika</a></li>
-   			 </ul>
-       	</div>
-        	 
-		<div id="outer">
-        	<div id="inner">
-        		<div id="registration">
-					<form class="contact_form" action="#" method="post" name="contact_form">
-   				 	<ul>
-        				<li>
-             				<h2>Kandideeri</h2>
-            				 <span class="required_notification">* Vajalikud väljad</span>
-        				</li>
-        				<li>
-            				<label for="firstName">Eesnimi:</label>
-            				<input type="text"  placeholder="Eesnimi" required maxlength="32" />
-        				</li>
-        				<li>
-            				<label for="lastName">Perenimi:</label>
-            				<input type="text"  placeholder="Perenimi" required maxlength="32" />
-        				</li>
-        				<li>
-            				<label for="email">Email:</label>
-            				<input type="email" name="email" placeholder="nimi@domeen.ee" required maxlength="32" />
-            				<span class="form_hint">Näiteks: "nimi@domeen.ee"</span>
-        				</li>
-        				<li>
-            				<label for="tel">Telefon</label>
-            				<input type="tel" name="tel" placeholder="1234 5678" required maxlength="15" />
-            				<span class="form_hint">Näiteks: "1337"</span>
-        				</li>
-        				<li>
-            				<label for="website">Asutuse veebileht:</label>
-            				<input type="url" name="website" placeholder="http://kodulehekülg.ee" required pattern="(http|https)://.+" maxlength="40"/>
-            				<span class="form_hint">Näiteks: "http://kodulehekülg.ee"</span>
-        				</li>
-        				<li>
-            				<label for="message">Enesetutvustus</label>
-            				<textarea name="message" cols="40" rows="6" required maxlength="400" placeholder="Maksimaalselt 400 tähemärki..."></textarea>
-            				
-        				</li>
-        				<liButtons>
-            				<button class="submit" type="submit">Lae pilt ...</button>
-            				<button class="submit" type="submit">Registeeri</button>
-        				</liButtons>
-    				</ul>
-				</form>			  
-        	</div>
-		</div>
-			
-		
-		
-		<div id="footer">
-		</div>
-	</div>
-	
+    </div>
+
+</div>
+ 
+
+</div>
 </body>
 
-</html> 
+</html>

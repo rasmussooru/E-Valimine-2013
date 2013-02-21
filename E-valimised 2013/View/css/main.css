@@ -1,73 +1,69 @@
-#outer 
-	{
-	position: fixed;
-	border: 1px solid #C8C8C8;
-	-moz-box-shadow: 3px 3px 4px #000;
-	-webkit-box-shadow: 3px 3px 4px #000;
-	box-shadow: 1px 1px 2px #000;
-	height: 50%;
-	width: 50%;
-	
-    border:solid black 1px;
-    top:10%;
-    right:25%;
-    left:25%;
-    padding:25px;
-    margin:25px;
-    }
+@charset "utf-8";
 
-#inner
-	{
-	position: fixed;
-	background-color: #FFF;
-	color: #595959;
-	text-align: left;
+#info {
+   margin-left: 65px;
+   margin-top: 100px;
+   border-bottom: #fff solid;
+   border-top: #fff solid;
+   border-width: 1px;
+     
+}
+#haaleta {
+   margin-left: 65px;
+   margin-top: 8px;
+   a:link color:#ffffff;     
+   a:visited color:#00FF00;  
+   
+}
+#kandideeri {
+   margin-left: 65px;
+   margin-top: 8px;
+}
+#kandidaadid {
+   margin-left: 65px;
+   margin-top: 8px;
+
+}
+#reaalaeg {
+   margin-left: 65px;
+   margin-top: 8px;
+}
+#statistika {
+	margin-left: 65px;
+    margin-top: 8px;
+
+}
+
+body {
+    background: #ffffff;
+}
+#keha {
+    width: 900px;
+    height: 630px;
+    margin: 10px auto;
     }
+#top {
+    width: 900px;
+    height: 120px;
+}
     
-#navigation 
-	{
-	position: fixed;
-	font-size:0.75em; 
-	width:100px; 
- 	cursor: pointer;
-	left: 410px;
-	top: 30%;
-	width: 8em;
-
-	}
-#navigation ul {margin:0px; padding:0px;}
-#navigation li 
-	{
-	list-style: none;
-	font-size:13px;
-	
-	}
-
-
-ul.top-level li {
- border-bottom: #fff solid;
- border-top: #fff solid;
- border-width: 1px;
- border: 1px solid #000000;
+}
+#middle {
+    width: 900px;
+    height: 550px;
+}
+#left{
+    width: 150px;
+    height: 330px;
+    float: left;
+}
+#pohi {
+    width: 700px;
+    height: 550px;
+    float: left;
+    border: 2px solid #000000;
 }
 
-#navigation a {
- color: #000000;
- display:block;
- height:25px;
- line-height: 25px;
- text-indent: 10px;                   
- text-decoration:none;
- width:25%;
-
- 
-
-}
-
-#navigation li:hover {
- background: #0073CF;
- position: relative;
-}
 
 
 
@@ -78,133 +74,137 @@ ul.top-level li {
 
 /* === List Styles === */
 .contact_form ul {
-    width:200%;
+    width:600px;
     list-style-type:none;
-	list-style-position:outside;
-	margin:0px;
-	padding:0px;
+list-style-position:outside;
+margin:0px;
+padding:0px;
 }
 .contact_form li{
-	padding:5px; 
-	
-} 
+padding:5px;
+
+}
 .contact_form li:first-child, .contact_form li:last-child {
-	border-bottom:1px solid #777;
+border-bottom:1px solid #777;
 }
 
 /* === Form Header === */
 .contact_form h2 {
-	margin:0;
-	display: inline;
+margin:0;
+display: inline;
 }
 .required_notification {
-	color:#d45252; 
-	margin:5px 0 0 0; 
-	display:inline;
-	float:right;
+color:#d45252;
+margin:5px 0 0 0;
+display:inline;
+float:right;
 }
 
 /* === Form Elements === */
 .contact_form label {
-	width:150px;
-	margin-top: 3px;
-	display:inline-block;
-	float:left;
-	padding:3px;
+width:150px;
+margin-top: 3px;
+display:inline-block;
+float:left;
+padding:3px;
 }
 .contact_form input {
-	height:20px; 
-	width:220px; 
-	padding:5px 8px;
+height:20px;
+width:220px;
+padding:5px 8px;
 }
-.contact_form textarea 
-	{
-	padding:5px 8px; 
-	width:220px; 
-	resize: none; }
+.contact_form textarea
+{
+padding:5px 8px;
+width:220px;
+resize: none; }
 .contact_form liButtons {margin-left: 180px;}
 /*.contact_form button {margin-left:100px;}*/
 
-	/* form element visual styles */
-	.contact_form input, .contact_form textarea { 
-		border:1px solid #aaa;
-		box-shadow: 0px 0px 3px #ccc, 0 10px 15px #eee inset;
-		border-radius:2px;
-		padding-right:30px;
-		
-		-webkit-transition: padding .25s; 
-		transition: padding .25s;
-	}
-	.contact_form input:focus, .contact_form textarea:focus {
-		background: #fff; 
-		border:1px solid #555; 
-		box-shadow: 0 0 3px #aaa; 
-	}
+/* form element visual styles */
+.contact_form input, .contact_form textarea {
+border:1px solid #aaa;
+box-shadow: 0px 0px 3px #ccc, 0 10px 15px #eee inset;
+border-radius:2px;
+padding-right:30px;
+
+-webkit-transition: padding .25s;
+transition: padding .25s;
+}
+.contact_form input:focus, .contact_form textarea:focus {
+background: #fff;
+border:1px solid #555;
+box-shadow: 0 0 3px #aaa;
+}
 
 /* === HTML5 validation styles === */	
 .contact_form input:required, .contact_form textarea:required {
-	background: #fff url(../images/red_asterisk.png) no-repeat 98% center;
+background: #fff url(../images/red_asterisk.png) no-repeat 98% center;
 }
 .contact_form input:required:valid, .contact_form textarea:required:valid {
-	background: #fff url(../images/valid.png) no-repeat 98% center;
-	box-shadow: 0 0 5px #5cd053;
-	border-color: #28921f;
+background: #fff url(../images/valid.png) no-repeat 98% center;
+box-shadow: 0 0 5px #5cd053;
+border-color: #28921f;
 }
 .contact_form input:focus:invalid, .contact_form textarea:focus:invalid {
-	background: #fff url(../images/invalid.png) no-repeat 98% center;
-	box-shadow: 0 0 5px #d45252;
-	border-color: #b03535
+background: #fff url(../images/invalid.png) no-repeat 98% center;
+box-shadow: 0 0 5px #d45252;
+border-color: #b03535
 }
 
 /* === Form hints === */
 .form_hint {
-	background: #d45252;
-	border-radius: 3px 3px 3px 3px;
-	color: white;
-	margin-left:8px;
-	padding: 1px 6px;
-	z-index: 999; /* hints stay above all other elements */
-	position: absolute; /* allows proper formatting if hint is two lines */
-	display: none;
+background: #d45252;
+border-radius: 3px 3px 3px 3px;
+color: white;
+margin-left:8px;
+padding: 1px 6px;
+z-index: 999; /* hints stay above all other elements */
+position: absolute; /* allows proper formatting if hint is two lines */
+display: none;
 }
 .form_hint::before {
-	content: "\25C0";
-	color:#d45252;
-	position: absolute;
-	top:1px;
-	left:-6px;
+content: "\25C0";
+color:#d45252;
+position: absolute;
+top:1px;
+left:-6px;
 }
 .contact_form input:focus + .form_hint {display: inline;}
 .contact_form input:required:valid + .form_hint {background: #28921f;}
 .contact_form input:required:valid + .form_hint::before {color:#28921f;}
-	
+
 /* === Button Style === */
 button.submit {
-	background-color: #68b12f;
-	background: -webkit-linear-gradient(top, #68b12f, #50911e);
-	border: 1px solid #509111;
-	border-bottom: 1px solid #5b992b;
-	border-radius: 3px;
-	-webkit-border-radius: 3px;
-	box-shadow: inset 0 1px 0 0 #9fd574;
-	color: white;
-	font-weight: bold;
-	padding: 6px 20px;
-	text-align: left;
-	text-shadow: 0 -1px 0 #396715;
+background-color: #68b12f;
+background: -webkit-linear-gradient(top, #68b12f, #50911e);
+border: 1px solid #509111;
+border-bottom: 1px solid #5b992b;
+border-radius: 3px;
+-webkit-border-radius: 3px;
+box-shadow: inset 0 1px 0 0 #9fd574;
+color: white;
+font-weight: bold;
+padding: 6px 20px;
+text-align: left;
+text-shadow: 0 -1px 0 #396715;
 }
 button.submit:hover {
-	opacity:.85;
-	cursor: pointer; 
+opacity:.85;
+cursor: pointer;
 }
 button.submit:active {
-	border: 1px solid #20911e;
-	box-shadow: 0 0 10px 5px #356b0b inset; 
-	-webkit-box-shadow:0 0 10px 5px #356b0b inset ;
-	-moz-box-shadow: 0 0 10px 5px #356b0b inset;
-	-ms-box-shadow: 0 0 10px 5px #356b0b inset;
-	-o-box-shadow: 0 0 10px 5px #356b0b inset;
+border: 1px solid #20911e;
+box-shadow: 0 0 10px 5px #356b0b inset;
+-webkit-box-shadow:0 0 10px 5px #356b0b inset ;
+-moz-box-shadow: 0 0 10px 5px #356b0b inset;
+-ms-box-shadow: 0 0 10px 5px #356b0b inset;
+-o-box-shadow: 0 0 10px 5px #356b0b inset;
+
+}
+/* === Panen fikseeritud laiused siia  === */
+#inner {
+	 width: 600px;
+    height: 450px;
 	
 }
-
-
