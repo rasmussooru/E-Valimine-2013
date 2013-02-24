@@ -258,9 +258,8 @@ float:right;
 /*Kandidaadid*/
 #kandidaatitevaatamine {
 	
-    width: 699px;
+    width: 691px;
     height: 550px;
-    border: 1px solid #000000;
     overflow: auto;
     padding-left:10px;
     
