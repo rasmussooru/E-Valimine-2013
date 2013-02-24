@@ -310,6 +310,96 @@ float:right;
 
 
 
+/*Sanderk*/
+
+.positsioon p{
+	font-size:40px;
+	float:left;
+	padding:27px;
+	border:solid 3px;
+	margin-left:20px;
+	margin-right:20px;
+}
+.nimi p{
+	font-size:20px;
+}
+
+.tulemused {
+	clear:both;
+}
+
+
+
+.Caption
+{
+    font-size: .9em;
+    font-style: italic;
+    margin: 0;
+    padding: 4px;
+}
+.tulpdiagramm
+{
+    border: solid 1px #000000;
+    padding: 0px;
+    margin: 0px 4em 0px 4em;
+    width: 40%;
+    float:left;
+}
+.tulpdiagramm tr
+{
+    vertical-align: top;
+    padding: 0px;
+    margin: 0px;
+    background-color: #00CC66;
+}
+.tulpdiagramm tr p
+{
+    position: relative;
+    display: inline;
+    font-size: .8em;
+    padding: 0px;
+    margin: 0px;
+    z-index: +1;
+}
+ 
+.tulp
+{
+    background-image: url(gridline58.gif);
+    background-repeat: repeat-x;
+    background-position: left top;
+    width: 100%;
+    background-color: #CCFFFF;
+}
+.tulp p
+{
+    margin: 0px 4px 4px 4px;
+    background-color: #FFFF99;
+    color: #000000;
+}
+.tulbasilt
+{
+    padding: 0px 4px 0px 4px;
+    width: 2.5em;
+    font-size: .9em;
+}
+
+.StatistikaNav {
+	width: 100%;
+	float: left;
+	margin: 0 0 3em 0;
+	padding: 0;
+	list-style: none;
+	clear:both; 
+}
+.StatistikaNav li {
+	float: left; 
+}
+
+.checkboxid{
+	float:left;
+	margin-left:40px;
+}
+
 
 
 

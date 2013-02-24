@@ -5,12 +5,14 @@
 <title>Reaalaeg</title>
 <link href="view/css/main.css" rel="stylesheet" type="text/css" />
 
+<link rel="stylesheet" media="print" href="view/css/print.css" type="text/css"> 
+
 
 </head>
 <body>
 <div id="keha">
 <! --------------Ülemine osa, siia saab logo panna vajadusel----------->
-  <div id="top">
+  <div id="top" class="noPrint">
        
   </div> 
  <! --------------Keskmine osa----------->
@@ -18,7 +20,7 @@
 
 	
 <! --------------Keskmise ala vasak osa----------->
-    <div id="left">
+    <div id="left" class="noPrint">
         <div id="info">                   
             <a href="info.html">Info</a>                          
                                                
@@ -45,11 +47,43 @@
     </div> 
      <! --------------Põhi osa----------->
     <div id="pohi">
-    	<h1>E-valimised 2013</h1>
-    
+    	<h1>Tulemused reaalajas</h1>
+    	<p class="noPrint">Tulemusi uuendatakse iga viie sekundi tagand</p>
     	
+    	<br/>
+    	<div class="tulemused">
+			<div class="kandidaat">
+    			<div class="posjaandmed">
+					<div class="positsioon"><!--Suur number kasti sees-->
+    					<p>8</p>
+    				</div>
+    			
+    				<div class="andmed">
+						<div class="nimi"> <p>Andrusonüümne Al</p> </div>
+						<div class="haali"> <p>Hääli 3</p> </div>
+						<div class="protsent"> <p>Protsent 3 %</p> </div>
+					</div>
+				</div>
+    		</div>   	
+    	</div>
+    	<div></div>
+    	<br/>
+    	<div class="tulemused">
+			<div class="kandidaat">
+    			<div class="posjaandmed">
+					<div class="positsioon"><!--Suur number kasti sees-->
+    					<p>9</p>
+    				</div>
+    			
+    				<div class="andmed">
+						<div class="nimi"> <p>Savi Päts</p> </div>
+						<div class="haali"> <p>Hääli 1</p> </div>
+						<div class="protsent"> <p>Protsent 1 %</p> </div>
+					</div>
+				</div>
+    		</div>    	
+    	</div>
 
-		
     </div>
 
 </div>
