@@ -64,10 +64,9 @@ body {
     border: 2px solid #000000;
 }
 #about {
-    width: 700px;
+    width: 699px;
     height: 550px;
     float: left;
-    border: 2px solid #000000;
     overflow: auto;
 }
 
