@@ -63,6 +63,13 @@ body {
     float: left;
     border: 2px solid #000000;
 }
+#about {
+    width: 700px;
+    height: 550px;
+    float: left;
+    border: 2px solid #000000;
+    overflow: auto;
+}
 
 
 
@@ -74,7 +81,7 @@ body {
 
 /* === List Styles === */
 .contact_form ul {
-    width:600px;
+    
     list-style-type:none;
 list-style-position:outside;
 margin:0px;
@@ -208,3 +215,59 @@ box-shadow: 0 0 10px 5px #356b0b inset;
     height: 450px;
 	
 }
+
+
+
+
+
+
+/*HAALETA*/
+p{
+margin: 2px;
+}
+#kandidaat{
+width: 100%;
+border-bottom: 2px solid #000;
+margin: 5px 0px 5px 0px;
+}
+#piltjatekst{
+width: 100%;
+margin: 5px 0px 5px 0px;
+min-height: 150px;
+}
+
+#nupp{
+margin: auto auto 5px 25px;
+}
+#pilt {
+width:150px;
+height: 150px;
+float: left;
+}
+#pilt img{
+width: 150px;
+height: 150px;
+}
+
+#andmed {
+	margin-top: 40px;
+width:75%;
+float:right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
