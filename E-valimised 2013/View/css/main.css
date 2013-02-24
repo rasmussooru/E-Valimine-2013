@@ -255,7 +255,49 @@ width:75%;
 float:right;
 }
 
+/*Kandidaadid*/
+#kandidaatitevaatamine {
+	
+    width: 699px;
+    height: 550px;
+    border: 1px solid #000000;
+    overflow: scroll;
+    padding-left:10px;
+    
+}
 
+#kandidaatidotsifilter {
+	width: 100px;
+    height: 50px;
+	
+}
+#kandidaatiotsiinfo {
+	width:600px;
+	height: 50px;
+	
+}
+#kandidaadibox {
+	height: 150px;
+	border-bottom: 1px solid #000;
+	padding-top:10px;
+
+	
+}
+
+#kandidaadipilt {
+	float:left;
+}
+#kandidaadipilt img{
+	width: 150px;
+	height: 150px;
+	
+}
+
+#kandidaadiandmed {
+	width: 500px;
+	float: right;
+	
+}
 
 
 
