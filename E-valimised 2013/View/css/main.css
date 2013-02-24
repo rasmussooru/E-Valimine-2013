@@ -261,7 +261,7 @@ float:right;
     width: 699px;
     height: 550px;
     border: 1px solid #000000;
-    overflow: scroll;
+    overflow: auto;
     padding-left:10px;
     
 }
@@ -280,8 +280,6 @@ float:right;
 	height: 150px;
 	border-bottom: 1px solid #000;
 	padding-top:10px;
-
-	
 }
 
 #kandidaadipilt {
