@@ -1,0 +1,459 @@
+@charset "utf-8";
+body {
+    background: #ffffff;
+	background-image: url(../images/pw_maze_white.png);
+	overflow-y: scroll;
+	font-family:Georgia, Times, "Times New Roman", serif; font: 12px;
+}
+h1
+{
+	text-shadow: 2px 2px 10px #3A75C4;
+    filter: dropshadow(color=#3A75C4, offx=2, offy=2);
+	text-transform: uppercase;
+	color: #3A75C4;
+	font-size: 40px;
+}
+h2
+{
+	text-shadow: 1px 1px 5px #3A75C4;
+    filter: dropshadow(color=#3A75C4, offx=2, offy=2);
+	text-transform: uppercase;
+	color: #3A75C4;
+	font-size: 25px;
+}
+#info {
+   margin-left: 65px;
+   margin-top: 100px;
+   border-bottom: #fff solid;
+   border-top: #fff solid;
+   border-width: 1px;
+     
+}
+#haaleta {
+   margin-left: 65px;
+   margin-top: 8px;
+   a:link color:#ffffff;     
+   a:visited color:#00FF00;  
+   
+}
+#kandideeri {
+   margin-left: 65px;
+   margin-top: 8px;
+}
+#kandidaadid {
+   margin-left: 65px;
+   margin-top: 8px;
+
+}
+#reaalaeg {
+   margin-left: 65px;
+   margin-top: 8px;
+}
+#statistika {
+	margin-left: 65px;
+    margin-top: 8px;
+}
+
+
+#keha {
+    width: 1000px;
+    margin: 10px auto;
+    }
+#top {
+    width: 1000px;
+    height: 100px;
+}
+.joon{
+	margin-top: -10px;
+	margin-bottom: 5px;
+	height:1px;
+	background-color:#3A75C4;
+	border-bottom:1px solid #3A75C4;
+	overflow:hidden;
+	}
+.joon2{
+	margin-top: -10px;
+	margin-bottom: 5px;
+	height:1px;
+	background-color:#000;
+	border-bottom:1px solid #000;
+	overflow:hidden;
+	}
+}
+#middle {
+    width: 1000px;
+    height: 550px;
+}
+
+#pohi {
+    width: 750px;
+    min-height: 500px;
+    float: right;
+    border: 2px solid #000000;
+}
+#about {
+    width: 750px;
+    height: auto;
+    float: left;
+}
+
+
+
+
+/*Registeerimine*/
+/* === Form Typography === */
+.contact_form h2, .contact_form label {font-family:Georgia, Times, "Times New Roman", serif; font: 12px;}
+.form_hint, .required_notification {font-size: 14px;}
+
+/* === List Styles === */
+.contact_form ul {
+    
+    list-style-type:none;
+list-style-position:outside;
+margin:0px;
+padding:0px;
+}
+.contact_form li{
+padding:5px;
+
+}
+
+
+/* === Form Header === */
+.contact_form h2 {
+margin:0;
+display: inline;
+}
+.required_notification {
+color:#d45252;
+margin:5px 0 0 0;
+display:inline;
+float:right;
+}
+
+/* === Form Elements === */
+.contact_form label {
+width:150px;
+margin-top: 3px;
+display:inline-block;
+float:left;
+padding:3px;
+}
+.contact_form input {
+height:20px;
+width:220px;
+padding:5px 8px;
+}
+.contact_form textarea
+{
+padding:5px 8px; 
+width:220px;
+resize: none; }
+.contact_form liButtons {margin-left: 180px;}
+/*.contact_form button {margin-left:100px;}*/
+
+/* form element visual styles */
+.contact_form input, .contact_form textarea {
+border:1px solid #aaa;
+box-shadow: 0px 0px 3px #ccc, 0 10px 15px #eee inset;
+border-radius:2px;
+padding-right:30px;
+
+-webkit-transition: padding .25s;
+transition: padding .25s;
+}
+.contact_form input:focus, .contact_form textarea:focus {
+background: #fff;
+border:1px solid #555;
+box-shadow: 0 0 3px #aaa;
+}
+
+/* === HTML5 validation styles === */	
+.contact_form input:required, .contact_form textarea:required {
+background: #fff url(../images/red_asterisk.png) no-repeat 98% center;
+}
+.contact_form input:required:valid, .contact_form textarea:required:valid {
+background: #fff url(../images/valid.png) no-repeat 98% center;
+box-shadow: 0 0 5px #5cd053;
+border-color: #28921f;
+}
+.contact_form input:focus:invalid, .contact_form textarea:focus:invalid {
+background: #fff url(../images/invalid.png) no-repeat 98% center;
+box-shadow: 0 0 5px #d45252;
+border-color: #b03535
+}
+
+/* === Form hints === */
+.form_hint {
+background: #d45252;
+border-radius: 3px 3px 3px 3px;
+color: white;
+margin-left:8px;
+padding: 1px 6px;
+z-index: 999; /* hints stay above all other elements */
+position: absolute; /* allows proper formatting if hint is two lines */
+display: none;
+}
+.form_hint::before {
+content: "\25C0";
+color:#d45252;
+position: absolute;
+top:1px;
+left:-6px;
+}
+.contact_form input:focus + .form_hint {display: inline;}
+.contact_form input:required:valid + .form_hint {background: #28921f;}
+.contact_form input:required:valid + .form_hint::before {color:#28921f;}
+
+/* === Button Style === */
+button.submit {
+background-color: #68b12f;
+background: -webkit-linear-gradient(top, #68b12f, #50911e);
+border: 1px solid #509111;
+border-bottom: 1px solid #5b992b;
+border-radius: 3px;
+-webkit-border-radius: 3px;
+box-shadow: inset 0 1px 0 0 #9fd574;
+color: white;
+font-weight: bold;
+padding: 6px 20px;
+text-align: left;
+text-shadow: 0 -1px 0 #396715;
+}
+button.submit:hover {
+opacity:.85;
+cursor: pointer;
+}
+button.submit:active {
+border: 1px solid #20911e;
+box-shadow: 0 0 10px 5px #356b0b inset;
+-webkit-box-shadow:0 0 10px 5px #356b0b inset ;
+-moz-box-shadow: 0 0 10px 5px #356b0b inset;
+-ms-box-shadow: 0 0 10px 5px #356b0b inset;
+-o-box-shadow: 0 0 10px 5px #356b0b inset;
+
+}
+/* === Panen fikseeritud laiused siia  === */
+#inner {
+	width: 730px;
+    height: auto;
+	
+}
+
+/*HAALETA*/
+p{
+margin: 2px;
+}
+#kandidaat{
+width: 100%;
+border-top: 2px solid #000;
+margin: -10px 0px 15px 0px;
+}
+#piltjatekst{
+width: 100%;
+margin: 5px 0px 5px 0px;
+min-height: 150px;
+}
+
+#nupp{
+margin: auto auto 5px 25px;
+}
+#pilt {
+width:150px;
+height: 150px;
+float: left;
+}
+#pilt img{
+width: 150px;
+height: 150px;
+}
+
+#andmed {
+	margin-top: 40px;
+width:75%;
+float:right;
+}
+
+/*Kandidaadid*/
+
+
+#kandidaatidotsifilter {
+	width: 100px;
+    height: 50px;
+}
+
+#kandidaatiotsiinfo {
+	width:750px;
+	height: 50px;
+	
+}
+#kandidaadibox {
+	height: 150px;
+	border-top: 2px solid #000;
+	padding-top:10px;
+}
+
+#kandidaadipilt {
+	float:left;
+}
+#kandidaadipilt img{
+	width: 150px;
+	height: 150px;
+	
+}
+
+#kandidaadiandmed {
+	width: 500px;
+	float: right;
+	
+}
+
+#boxisisu {
+	padding-left: 10px;
+    width: 730px;
+    height: auto;
+}
+
+
+
+/*Sanderk*/
+
+.positsioon p{
+	font-size:40px;
+	float:left;
+	padding:27px;
+	border:solid 3px;
+	margin-left:20px;
+	margin-right:20px;
+}
+.nimi p{
+	font-size:20px;
+}
+
+.tulemused {
+	clear:both;
+}
+
+
+
+.Caption
+{
+    font-size: .9em;
+    font-style: italic;
+    margin: 0;
+    padding: 4px;
+}
+.tulpdiagramm
+{
+    border: solid 1px #000000;
+    padding: 0px;
+    margin: 0px 4em 0px 4em;
+    width: 40%;
+    float:left;
+}
+.tulpdiagramm tr
+{
+    vertical-align: top;
+    padding: 0px;
+    margin: 0px;
+    background-color: #00CC66;
+}
+.tulpdiagramm tr p
+{
+    position: relative;
+    display: inline;
+    font-size: .8em;
+    padding: 0px;
+    margin: 0px;
+    z-index: +1;
+}
+ 
+.tulp
+{
+    background-image: url(gridline58.gif);
+    background-repeat: repeat-x;
+    background-position: left top;
+    width: 100%;
+    background-color: #CCFFFF;
+}
+.tulp p
+{
+    margin: 0px 4px 4px 4px;
+    background-color: #FFFF99;
+    color: #000000;
+}
+.tulbasilt
+{
+    padding: 0px 4px 0px 4px;
+    width: 2.5em;
+    font-size: .9em;
+}
+
+.StatistikaNav {
+	width: 100%;
+	float: left;
+	margin: 0 0 3em 0;
+	padding: 0;
+	list-style: none;
+	clear:both; 
+}
+.StatistikaNav li {
+	float: left; 
+}
+
+.checkboxid{
+	float:left;
+	margin-left:40px;
+}
+
+#left
+{
+	height: auto;
+	width: 220px;
+    float: left;
+	border: 2px solid #000;
+}
+
+
+#left nav
+{
+  	width: 200px;
+}
+  
+#left ul
+{
+padding:0;
+margin:0;
+  	list-style-type:none;
+}
+  
+#left ul a
+{
+ 	text-decoration:none;
+	color: #000;
+}
+
+#left ul li
+{
+	display:block;
+	padding:5px;
+	
+	text-indent:5px;
+}
+
+#left ul li:hover
+{
+	background-color:#3A75C4;
+}
+
+
+
+
+
+
+
+
+
+
+
+
