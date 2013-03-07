@@ -1,0 +1,8 @@
+{
+"kandidaat": 
+[
+{ "firstName":"John" , "lastName":"Doe" , "location":"Tartumaa"},
+{ "firstName":"Anna" , "lastName":"Smith" , "location":"Võrumaa"},
+{ "firstName":"Peter" , "lastName":"Jones" , "location":"Harjumaa"}
+]
+}
