@@ -6,6 +6,7 @@ function validate(form) {
   var gender = form.gender.value;
   var phone = form.phone.value;
   var erakond = form.erakond.value;
+  var piirkond = form.piirkond.value;
   var veeb = form.veeb.value;
   var message = form.message.value;
   var nameRegex = /^[a-zA-Z]+(([\'\,\.\- ][a-zA-Z ])?[a-zA-Z]*)*$/;
@@ -49,6 +50,11 @@ function validate(form) {
   
   if(erakond == "") {
 	    inlineMsg('erakond','Palun m&auml;&auml;ra oma erakondlik kuuluvus',2);
+	    return false;
+	  }
+  
+  if(piirkond == "") {
+	    inlineMsg('piirkond','Palun m&auml;&auml;ra oma piirkond',2);
 	    return false;
 	  }
     
