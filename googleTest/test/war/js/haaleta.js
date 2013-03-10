@@ -15,7 +15,7 @@ $(document).ready(function () {
                     '</div>' +
                     '</div>' +
                     '<div id="nupp">' +
-                    '<button class="submit" type="submit">H‰‰leta</button>' +
+                    '<button class="submit" type="submit">H&auml;&auml;leta</button>' +
                     '</div>' +
                     '</div>';
                 $(info).appendTo("#boxisisu");
