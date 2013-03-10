@@ -7,4 +7,4 @@
 .form input {float:left; margin-top:10px}
 
 #msg {display:none; position:absolute; z-index:200; background:url(view/images/msg_arrow.gif) left center no-repeat; padding-left:15px}
-#msgcontent {display:block; background:#f3e6e6; padding-left:10px;border:2px solid #924949; border-left:none; padding:15px; min-width:150px; max-width:250px}
+#msgcontent {display:block; background:#f3e6e6; border:2px solid #924949; padding:15px; min-width:150px; max-width:250px}
