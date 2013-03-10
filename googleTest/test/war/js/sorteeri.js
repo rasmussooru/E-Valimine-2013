@@ -3,6 +3,7 @@ $('#showdata').ready(function(){
 $.getJSON("data/test.json",function(data){
           $.each(data.kandidaat, function(i,kandidaat){
 		if(kandidaat.location == 'Tartumaa') {
+		$("p").remove();
               info = '<div id="kandidaat">' +
                      	'<div id="piltjatekst">' +
                   			'<div id="pilt">' +

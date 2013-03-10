@@ -4,6 +4,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Kandidaadid</title>
 <link href="view/css/main.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/test.js"></script>
 
 
 </head>
@@ -44,42 +46,27 @@
 				
    			<tr>
   			<td>Erakond</td>
-  			<td><form action="">
-				<select name="erakonnad">
-					<option value="tyhi"></option>
-					<option value="reform">Reformierakond</option>
-					<option value="kesk">Keskerakond</option>
-					<option value="sots">Sotsiaaldemokraadid</option>
-					<option value="irl">Isamaa ja Respublica Liit</option>
-					<option value="hipid">Rohelised</option>
-					<option value="kristlik">Eesti Kristlik Erakond</option>
-				</select>
-				</form>
+  			<td><form name = "erakonnad" action="">
+				<select id="select">
+					<option value="All">K�ik</option>
+					<option value="Keskerakond">Keskerakond</option>
+					<option value="Rohelised">Rohelised</option>
+					<option value="Reformierakond">Reformierakond</option>
+				 </select>			
+			</form>
 			</td>
   			<td>Maakond</td>
- 			<td><form action="">
-				<select name="maakonnad">
-				    <option value="tyhi"></option>
-					<option value="harju">Harju</option>
-					<option value="hiiu">Hiiu</option>
-					<option value="idaviru">Ida-Viru</option>
-					<option value="jogeva">Jõgeva</option>
-					<option value="jarva">Järva</option>
-					<option value="laane">Lääne</option>
-					<option value="laaneviru">Lääne-Viru</option>
-					<option value="polva">Põlva</option>
-					<option value="parnu">Pärnu</option>
-					<option value="rapla">Rapla</option>
-					<option value="saare">Saare</option>
-					<option value="tartu">Tartu</option>
-					<option value="valga">Valga</option>
-					<option value="viljandi">Viljandi</option>
-					<option value="v6ru">Võru</option>
-				</select>
-				</form>
+ 			<td><form name = "maakonnad" action="">
+				<select id="valik">
+					<option value="All">K�ik</option>
+					<option value="Tartumaa">Tartumaa</option>
+					<option value="V�rumaa">V�rumaa</option>
+					<option value="Harjumaa">Harjumaa</option>
+				 </select>			
+			</form>
 			</td>
 			<td>
-			<button type="button">Otsi </button>
+			<input type="button" id="button" value="Otsi" />
 			</td>
 			</tr>
 			</table>

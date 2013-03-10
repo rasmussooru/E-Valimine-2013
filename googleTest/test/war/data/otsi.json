@@ -1,0 +1,11 @@
+
+
+{
+	"kandidaat": [
+{ "nimi":"John Doe" , "lastName":"Doe" , "location":"Harjumaa" , "lisainfo":"Tere minu nimi on see", "erakond":"Reformierakond"},
+{ "nimi":"John Doe" , "lastName":"Doe" , "location":"Harjumaa" , "lisainfo":"Tere minu nimi on see", "erakond":"Reformierakond"},
+{ "nimi":"Anna Smith" , "lastName":"Smith" , "location":"Tartumaa" , "lisainfo":"Tere minu nimi on see", "erakond":"Keskerakond"},
+{ "nimi":"Peter Jones" , "lastName":"Jones" , "location":"Võrumaa" , "lisainfo":"Tere minu nimi on see", "erakond":"Rohelised"}
+
+	]
+}
