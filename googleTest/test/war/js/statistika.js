@@ -9,6 +9,7 @@
 $(document).ready(function(){
 	$(".statFilter").change(function() {
 		addCheckboxes();
+		showImage();
 		drawStuff();
 	});
 });
@@ -20,6 +21,7 @@ $(document).ready(function(){
 
 //$(document).ready(function(){
 	$(".filterCheckbox").click(function() {
+		showImage();
 		drawStuff();
 	});
 //});
@@ -52,6 +54,7 @@ function addCheckboxes(){
 function googleLoaded(){
 	resetFilters();
 	addCheckboxes();
+	showImage();
 	drawStuff();
 }
 
@@ -90,3 +93,16 @@ function drawStuff(){
     tabel.draw(tableData, options);
 	
 };
+
+function showImage()
+{
+	var elem = document.getElementById('testimage');
+	elem.style.display = 'block';
+	setTimeout("hideImage()", 4000);
+}
+
+function hideImage()
+{
+	var elem = document.getElementById('testimage');
+	elem.style.display = 'none';
+}
