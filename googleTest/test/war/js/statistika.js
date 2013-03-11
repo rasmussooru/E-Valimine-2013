@@ -75,6 +75,7 @@ function drawStuff(){
 		$.each(data.kandidaat, function (i, k) {
 			//alert(k.nimi + k.haali + k.erakond + k.location + k.id);
 			tableData.addRow([k.nimi, k.haali, k.erakond, k.location, k.id]);
+			chartData.addRow([k.nimi, k.haali]);
 			//alert(k.nimi + k.haali + k.erakond + k.location + k.id);
 			//var elem = $("[id=" + k.id+ "]");
 			//var s = elem.firstChild.is(:'checked');
@@ -84,13 +85,13 @@ function drawStuff(){
 			//	chartData.addRow([k.nimi, k.haali]);
 			//}
         });
+		var options = {};
+	    var chart = new google.visualization.PieChart(document.getElementById("diagramm"));
+	    chart.draw(chartData, options);
+	    var tabel = new google.visualization.Table(document.getElementById("tabel"));
+	    tabel.draw(tableData, options);
 	});
 	
-	var options = {};
-    var chart = new google.visualization.PieChart(document.getElementById("diagramm"));
-    chart.draw(chartData, options);
-    var tabel = new google.visualization.Table(document.getElementById("tabel"));
-    tabel.draw(tableData, options);
 	
 };
 
