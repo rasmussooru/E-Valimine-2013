@@ -5,8 +5,11 @@
 <title>Statistika</title>
 <link href="view/css/main.css" rel="stylesheet" type="text/css" />
 
-<link rel="stylesheet" media="print" href="view/css/print.css" type="text/css"> 
+<link rel="stylesheet" media="print" href="view/css/print.css" type="text/css">
 
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript" src="js/statistika.js"></script>
 
 </head>
 <body>
@@ -37,61 +40,43 @@
 	<div id="boxisisu">
 	
     	<h2>Statistika</h2>
-		<div class="joon2"></div>
-    	<div class = "noPrint">
-	    	<ul class="StatistikaNav">
-	    		<li><button class="submit" type="submit">Riik</button></li>
-	    		<li><button class="submit" type="submit">Piirkond</button></li>
-	    		<li><button class="submit" type="submit">Partei</button></li>
-	    		<li><button class="submit" type="submit">Kandidaadid</button></li>
-	    	</ul>
-    	</div>
-    	<br/>
-    	<br/>
+		<div class="joon2 noPrint"></div>
+    	
+   		<div id="kandidaatidotsifilter">
+   			<table>
+			<tr>
+			<td>Erakond</td>
+			<td>
+				<select class="statFilter" id="statistikaErakonnad">
+					<option value="All">Kõik</option>
+					<option value="Keskerakond">Keskerakond</option>
+					<option value="Rohelised">Rohelised</option>
+					<option value="Reformierakond">Reformierakond</option>
+				</select>
+			</td>
+			<td>Maakond</td>
+			<td>
+				<select class="statFilter" id="statistikaMaakonnad">
+					<option value="All">Kõik</option>
+					<option value="Tartumaa">Tartumaa</option>
+					<option value="Võrumaa">Võrumaa</option>
+					<option value="Harjumaa">Harjumaa</option>
+				</select>
+			</td>
+			</tr>
+			</table>
+   		</div>
     	
     	
-		<div class="tulpdiagramm">
-		    <table>
-		        <caption>Statistika</caption>
-		        <tr>
-		            <td><div class="tulbasilt"">Savi</div></td>
-		            <td class="tulp">
-		                <img src="view\images\roheline.png" height="12" alt="32" width="32" />
-		                <p>32</p>
-		            </td>
-		        </tr>
-		        <tr>
-		            <td><div class="tulbasilt">Muda</div></td>
-		            <td class="tulp">
-		                <img src="view\images\punane.png" height="12" alt="42" width="42" />
-		                <p>42</p>
-		            </td>
-		        </tr>
-		        <tr>
-		            <td><div class="tulbasilt"">Pori</div></td>
-		            <td class="tulp">
-		                <img src="view\images\roheline.png" height="12" alt="46" width="46" />
-		                <p>46</p>
-		            </td>
-		        </tr>
-		        <tr>
-		            <td><div class="tulbasilt"">Sopp</div></td>
-		            <td class="tulp">
-		                <img src="view\images\punane.png" height="12" alt="51" width="51" />
-		                <p>51</p>
-		            </td>
-		        </tr>
-		    </table>
+		<div id="diagramm" class="noPrint">
 		</div>
 		
-		<div class="checkboxid noPrint">
+		<div id="checkboxid" class="noPrint">
+		</div>
 		
-			<form action="">
-			<input type="checkbox" name="kandidaat" value="Savi">Savi<br>
-			<input type="checkbox" name="kandidaat" value="Muda">Muda<br>
-			<input type="checkbox" name="kandidaat" value="Pori">Pori<br>
-			<input type="checkbox" name="kandidaat" value="Sopp">Sopp 
-			</form>
+		<div class="joon2 noPrint"></div>
+		
+		<div id="tabel">
 		</div>
 				
     </div>
