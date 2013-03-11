@@ -398,3 +398,10 @@ margin:0;
 	float:left;
 	margin-left:40px;
 }
+
+#testimage {
+width:700px; /* width of image **/
+height:500px; /* or height of image**/
+display:none;
+background-image: url('../images/progress.png');
+}
