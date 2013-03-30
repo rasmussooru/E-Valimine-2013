@@ -405,3 +405,9 @@ height:500px; /* or height of image**/
 display:none;
 background-image: url('../images/progress.png');
 }
+
+#sisselogimine {
+	width:700px; 
+	height:500px; 
+	
+}
