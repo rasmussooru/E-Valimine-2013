@@ -1,7 +1,7 @@
 
 $(document).ready(function(){
 $.getJSON("data/otsi.json",function(data){
-	$("#button").click( function()
+	$("#button").on("click", function()
            {
 		$.each(data.kandidaat, function(i,kandidaat){
 			$('#kandidaadibox').remove();
