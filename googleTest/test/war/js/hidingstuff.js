@@ -4,3 +4,4 @@ function showStuff(id) {
 	function hideStuff(id) {
 		document.getElementById(id).style.display = 'none';
 	}
+	

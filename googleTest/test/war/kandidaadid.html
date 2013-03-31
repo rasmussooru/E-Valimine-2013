@@ -14,19 +14,22 @@
 <! --------------Ülemine osa, siia saab logo panna vajadusel----------->
   <div id="top">
        <h1>E-valimised 2013</h1>
-	   <div class="joon"></div>
+       <div class="joon"></div>
 	   <div class="sisselogimine">
 	<form name="form2" id="form2" class="form2" action="" method="post">
       		<label for="kasutajanimi">Kasutajanimi</label>
     		<input type="text"  name="kasutajanimi" id="kasutajanimi" />
     		<label for="parool">Parool</label>
     		<input type="text"  name="parool" id="parool" />
-    		<button class="submit" type="submit">Logi sisse</button>
-    		<button class="submit" type="submit">Registreeri</button>
+  
 		</form>
-		
-	   </div>
-  </div> 
+
+	    <button onclick="document.getElementById('form2').style.display = 'none'; document.getElementById('kasutaja').style.display = 'block';">Logi sisse</button>
+		<button onclick="document.getElementById('form2').style.display = 'block'; document.getElementById('kasutaja').style.display = 'none';">Logi välja</button>
+
+</div>
+<div id="kasutaja" style="display:none;">Oled sisse loginud <b><i>Test kasutajaga</i></b></div>
+</div><br>
   <br>
  <! --------------Keskmine osa----------->
 <div id="middle">

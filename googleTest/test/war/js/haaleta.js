@@ -15,7 +15,7 @@ $(document).ready(function () {
                     '</div>' +
                     '</div>' +
                     '<div id="nupp">' +
-                    '<button class="submit" type="submit">H&auml;&auml;leta</button>' +
+                    '<form><input type="checkbox" name="fakeh22l" value="h22l"></form>'+
                     '</div>' +
                     '</div>';
                 $(info).appendTo("#boxisisu");
@@ -24,3 +24,10 @@ $(document).ready(function () {
     });
 
 });
+
+function showStuff(id) {
+	document.getElementById(id).style.display = 'block';
+}
+function hideStuff(id) {
+	document.getElementById(id).style.display = 'none';
+}

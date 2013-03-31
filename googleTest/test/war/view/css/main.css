@@ -18,7 +18,14 @@ h2
 	text-shadow: 1px 1px 5px #3A75C4;
     filter: dropshadow(color=#3A75C4, offx=2, offy=2);
 	text-transform: uppercase;
-	color: #3A75C4;
+	color: #336699;
+	font-size: 25px;
+}
+
+h3
+{
+	text-transform: uppercase;
+	color: #336699;
 	font-size: 25px;
 }
 #info {
