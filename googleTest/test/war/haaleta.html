@@ -7,6 +7,7 @@
 
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
 <script type="text/javascript" src="js/haaleta.js"></script>
+<script type="text/javascript" src="js/hidingstuff.js"></script>
 
 
 
@@ -30,7 +31,7 @@
 		</form>
 		
 	   </div>
-  </div> 
+	     </div> 
   <br>
  <! --------------Keskmine osa----------->
 <div id="middle">
@@ -51,7 +52,10 @@
     <div id="pohi">
 	<div id="boxisisu">
     	<h2>Hääleta</h2>
- 
+ <p><a href="#" onclick="showStuff('answer1'); return false;">Hääleta</a><br>
+<p><a href="#" onclick="hideStuff('answer1'); return false;">Võta hääl tagasi</a><br>
+
+<span id="answer1" style="display: none;">Hääletatud</span></p><br>
 
     		
     		
