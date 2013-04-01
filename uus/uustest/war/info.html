@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Info</title>
+<link href="view/css/main.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/hidingstuff.js"></script>
+
+
+</head>
+<body>
+<div id="keha">
+<! --------------Ülemine osa, siia saab logo panna vajadusel----------->
+  <div id="top">
+       <h1>E-valimised 2013</h1>
+	   <div class="joon"></div>
+	   <div i="sisselogimine">
+	  <form name="form2" id="form2" class="form2" action="" method="post" >
+      		<label for="kasutajanimi">Kasutajanimi</label>
+    		<input type="text"  name="kasutajanimi" id="kasutajanimi"  />
+    		<label for="parool">Parool</label>
+    		<input type="text"  name="parool" id="parool" />
+ 
+		</form>
+		
+	  
+	    <button onclick="document.getElementById('form2').style.display = 'none'; document.getElementById('kasutaja').style.display = 'block';">Logi sisse</button>
+		<button onclick="document.getElementById('form2').style.display = 'block'; document.getElementById('kasutaja').style.display = 'none';">Logi välja</button>
+
+</div>
+<div id="kasutaja" style="display:none;">Oled sisse loginud <b><i>Test kasutajaga</i></b></div>
+</div><br>
+  <br>
+ <! --------------Keskmine osa----------->
+<div id="middle">
+
+	
+<! --------------Keskmise ala vasak osa----------->
+    <div id="left">
+        
+		<ul>
+		<li><a href="info.html">Info</a></li>
+		<li><a href="haaleta.html">H&auml;&auml;leta</a> </li>
+		<li><a href="kandideeri.html">Kandideeri</a> </li>
+		<li><a href="kandidaadid.html">Kandidaadid</a></li>
+		<li><a href="statistika.html">Statistika</a></li>
+		</ul>
+    </div> 
+     <! --------------Põhi osa----------->
+    <div id="pohi">
+    	
+    	<div id="boxisisu">
+    	<h2>Info</h2>
+		<div class="joon2"></div>
+    	<p align="justify">Tere tulemast E-valimiste 2013 leheküljele.
+    	<br><br>
+    	Siin lehel pole võimalik hääletada, kandideerida ega näha või otsida kandidaatide kohta infot.<br/> 
+    	Antud leht on loodud Tartu ülikooli kursuse<a href="https://courses.cs.ut.ee/2013/vl/spring">"veebriakenduste loomine"</a> raames.<br/> 
+    	Osade tegevuste tstimiseks on vajalik sisse logimine.<br/> 
+    	Enda isiku valideerimine on võimalik mitmel meetodil: Google, Facebooki, Twitteri, Id kaardi abil.<br/>
+    	 
+    	
+    	</p>
+    	</div>
+    	
+
+		
+    </div>
+
+</div>
+ 
+
+</div>
+</body>
+
+</html>

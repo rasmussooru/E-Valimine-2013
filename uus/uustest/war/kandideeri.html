@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Kandidaadid</title>
+<link href="view/css/main.css" rel="stylesheet" type="text/css" />
+<link href="view/css/messages.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/messages.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/test.js"></script>
+<script type="text/javascript" src="js/hidingstuff.js"></script>
+</head>
+<body>
+<div id="keha">
+<! --------------Ülemine osa, siia saab logo panna vajadusel----------->
+  <div id="top">
+       <h1>E-valimised 2013</h1>
+	   <div class="joon"></div>
+	   <div class="sisselogimine">
+	   <form name="form2" id="form2" class="form2" action="" method="post">
+      		<label for="kasutajanimi">Kasutajanimi</label>
+    		<input type="text"  name="kasutajanimi" id="kasutajanimi" />
+    		<label for="parool">Parool</label>
+    		<input type="text"  name="parool" id="parool" />
+
+		</form>
+		
+
+	    <button onclick="document.getElementById('form2').style.display = 'none'; document.getElementById('kasutaja').style.display = 'block';">Logi sisse</button>
+		<button onclick="document.getElementById('form2').style.display = 'block'; document.getElementById('kasutaja').style.display = 'none';">Logi välja</button>
+
+</div>
+<div id="kasutaja" style="display:none;">Oled sisse loginud <b><i>Test kasutajaga</i></b></div>
+</div><br>
+  <br>
+ <! --------------Keskmine osa----------->
+<div id="middle">
+
+	
+<! --------------Keskmise ala vasak osa----------->
+    <div id="left">
+        
+		<ul>
+		<li><a href="info.html">Info</a></li>
+		<li><a href="haaleta.html">H&auml;&auml;leta</a> </li>
+		<li><a href="kandideeri.html">Kandideeri</a> </li>
+		<li><a href="kandidaadid.html">Kandidaadid</a></li>
+		<li><a href="statistika.html">Statistika</a></li>
+		</ul>
+    </div> 
+     <! --------------Põhi osa----------->
+    <div id="pohi">
+	<div id="boxisisu">
+	<h2>Kandideeri</h2>
+	<div class="joon2"></div>
+    <div id="inner">
+         <div id="registration">
+<form name="form" id="form" class="form" action="" onsubmit="return validate(this)" method="post">
+    
+    <label for="name">Eesnimi:*</label>
+    <input type="text" placeholder="Eesnimi" name="name" id="name" /></br></br>
+    <label for="family" >Perenimi:*</label>
+    <input type="text" placeholder="Perekonnanimi" name="family" id="family" /></br></br>
+    <label for="gender">Sugu:*</label>
+    <select name="gender" id="gender">
+    <option value =""></option>
+    <option value ="male">Mees</option>
+    <option value ="female">Naine</option>
+    </select><br></br>
+    <label for="email">Email:*</label>
+    <input type="text" placeholder="nimi@domeen.ee" name="email" id="email"/></br></br>
+    <label for="phone">Telefon:*</label>
+    <input type="text" name="phone" id="phone" /></br></br>
+    <label for="erakond">Erakond:*</label>
+    <select name="erakond" id="erakond">
+    <option value =""></option>
+    <option value ="reform">Reformierakond</option>
+    <option value ="irl">Isamaa ja Respublica Liit</option>
+    <option value ="kesk">Keskerakond</option>
+    <option value ="rohelised">Rohelised</option>
+    <option value ="sots">Sotsiaaldemokraadid</option>
+    </select><br></br>
+    <label for="piirkond">Piirkond:*</label>
+    <select name="piirkond" id="piirkond">
+    <option value =""></option>
+    <option value ="tartu">Tartumaa</option>
+    <option value ="harju">Harjumaa</option>
+    <option value ="saare">Saaremaa</option>
+    <option value ="idaviru">Ida-Virumaa</option>
+    </select><br></br>
+    <label for="veeb">Veebileht:</label>
+    <input type="text" name="veeb" id="veeb" /></br></br>
+    <label for="message">L&uuml;hitutvustus:*</label></br></br>
+    <textarea name="message" id="message" cols="40" rows="6"/></textarea><br></br>
+    <button class="submit" type="submit">Lae pilt ...</button>
+    <button class="submit" type="submit">Registreeri</button>
+    
+  
+
+  </form><br></br>
+
+         
+    
+
+         </div>
+</div>
+    	
+
+		</div>
+    </div>
+
+</div>
+ 
+
+</div>
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Kandidaadid</title>
+<link href="view/css/main.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/test.js"></script>
+
+
+</head>
+<body>
+<div id="keha">
+<! --------------Ülemine osa, siia saab logo panna vajadusel----------->
+  <div id="top">
+       <h1>E-valimised 2013</h1>
+       <div class="joon"></div>
+	   <div class="sisselogimine">
+	<form name="form2" id="form2" class="form2" action="" method="post">
+      		<label for="kasutajanimi">Kasutajanimi</label>
+    		<input type="text"  name="kasutajanimi" id="kasutajanimi" />
+    		<label for="parool">Parool</label>
+    		<input type="text"  name="parool" id="parool" />
+  
+		</form>
+
+	    <button onclick="document.getElementById('form2').style.display = 'none'; document.getElementById('kasutaja').style.display = 'block';">Logi sisse</button>
+		<button onclick="document.getElementById('form2').style.display = 'block'; document.getElementById('kasutaja').style.display = 'none';">Logi välja</button>
+
+</div>
+<div id="kasutaja" style="display:none;">Oled sisse loginud <b><i>Test kasutajaga</i></b></div>
+</div><br>
+  <br>
+ <! --------------Keskmine osa----------->
+<div id="middle">
+
+	
+<! --------------Keskmise ala vasak osa----------->
+   <div id="left">
+        
+		<ul>
+		<li><a href="info.html">Info</a></li>
+		<li><a href="haaleta.html">H&auml;&auml;leta</a> </li>
+		<li><a href="kandideeri.html">Kandideeri</a> </li>
+		<li><a href="kandidaadid.html">Kandidaadid</a></li>
+		<li><a href="statistika.html">Statistika</a></li>
+		</ul>
+    </div> 
+     <! --------------Põhi osa----------->
+    <div id="pohi">
+    	<div id="boxisisu">
+    		<h2>Kandidaadid</h2>
+			<div class="joon2"></div>
+    		<div id="kandidaatiotsiinfo"> 
+    			<p>Saamaks teada rohkem infot kandidaatite kohta kasuta otsimis funktsiooni mis asub all.</p>
+    		</div>
+    		<div id="kandidaatidotsifilter">
+    			
+    		<table>
+				
+   			<tr>
+  			<td>Erakond</td>
+  			<td><form name = "erakonnad" action="">
+				<select id="select">
+					<option value="All">Kõik</option>
+					<option value="Keskerakond">Keskerakond</option>
+					<option value="Rohelised">Rohelised</option>
+					<option value="Reformierakond">Reformierakond</option>
+				 </select>			
+			</form>
+			</td>
+  			<td>Maakond</td>
+ 			<td><form name = "maakonnad" action="">
+				<select id="valik">
+					<option value="All">Kõik</option>
+					<option value="Tartumaa">Tartumaa</option>
+					<option value="V&otilde;rumaa">Võrumaa</option>
+					<option value="Harjumaa">Harjumaa</option>
+				 </select>	
+				 
+			</td>
+			<td>
+			<label for="otsikandidaati">Nimi</label>
+    		<td><input type="text"  name="otsikandidaati" id="otsikandidaati" /></td>
+			</td>
+			</tr>		
+			</form>
+			
+			</td>
+			<td>
+			<input type="button" id="button" value="Otsi" />
+			</td>
+			</tr>
+			</table><br>
+				<br><br>
+    		</div><br>
+    
+    	
+    	</div>
+    	
+    
+    	
+
+		
+    </div>
+
+</div>
+ 
+
+</div>
+</body>
+
+</html>

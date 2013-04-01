@@ -1,0 +1,19 @@
+---
+applications:
+  .:
+    name: E-valimine
+    framework:
+      name: standalone
+      info:
+        mem: 64M
+        description: Standalone Application
+        exec: 
+    runtime: java
+    command: af tunnel
+    infra: eu-aws
+    url: e-valimine
+    mem: '512'
+    instances: 1
+    services:
+      mysql-fd405:
+        type: mysql

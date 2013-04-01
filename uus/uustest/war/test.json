@@ -1,0 +1,55 @@
+
+$(document).ready(function(){
+$.getJSON("data/otsi.json",function(data){
+	$("#button").on("click", function()
+           {
+		$.each(data.kandidaat, function(i,kandidaat){
+			$('#kandidaadibox').remove();
+});
+})		
+});
+});
+
+
+
+
+$(document).ready(function(){
+	$("#button").click( function()
+           {
+
+$('#showdata').ready(function(){
+$.getJSON("data/otsi.json",function(data){
+          $.each(data.kandidaat, function(i,kandidaat){
+		$('select').ready(function(){
+			var selected = $(this).find('option:selected');
+			var test = selected.val();
+			$('select1').ready(function(){
+			var selected1 = $(this).find('option:selected');
+			var test1 = selected1.val();	
+					 }				
+		if(kandidaat.erakond == test && kandidaat.location =) {
+              	info = '<div id="kandidaadibox">' +
+                     		'<div id="kandidaadipilt">' +
+                               		'<img alt="Andrus Ansip" src="view/images/kandidaadid/andrus.jpg">' +
+              			'</div>' +
+              			'<div id="kandidaadiandmed">' +
+              				 		'<p>Nimi: ' + kandidaat.nimi + '</p>' +
+           							'<p>Asukoht: ' + kandidaat.location +'</p>' + 
+              				 		'<p>Erakond: ' + kandidaat.erakond +'</p>' +
+								'<p>Lisainfo: ' + kandidaat.lisainfo +'</p>' +
+								
+              			'</div>' +
+              			'</div>' +
+				'</div>';
+                 	$(info).appendTo("#boxisisu");
+						}
+else {
+	console.log(selected.val());
+}
+          });
+        });
+	
+	});
+})		
+});
+});
