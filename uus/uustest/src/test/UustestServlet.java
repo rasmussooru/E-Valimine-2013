@@ -18,71 +18,43 @@ import com.google.appengine.api.rdbms.AppEngineDriver;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.lang.reflect.Type;
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
 
 import com.google.appengine.api.rdbms.AppEngineDriver;
+import com.google.gson.Gson;
 
 import javax.servlet.http.*;
-
-import org.json.JSONObject;
 
 
 @SuppressWarnings("serial")
 public class UustestServlet extends HttpServlet {
-public void doGet(HttpServletRequest req, HttpServletResponse resp)
-throws IOException {
-resp.setContentType("application/json");
-
-Connection c = null;
-try {
-c = DriverManager.getConnection("jdbc:google:rdbms://e-valimine2013:e-valimine/valimine");
-ResultSet rs = c.createStatement().executeQuery("SELECT id,eesnimi,perenimi,vanus,linn,maakond FROM valijad WHERE eesnimi = 'Rasmus';");
-
-
-//resp.getWriter().println("{");
-//resp.getWriter().println("\"kandidaat\"" + ":");	
-//resp.getWriter().println("[");
-while (rs.next()){
-int id = rs.getInt("id");
-String eesnimi = rs.getString("eesnimi");
-String perenimi = rs.getString("perenimi");
-int vanus = rs.getInt("vanus");
-String linn = rs.getString("linn");
-String maakond = rs.getString("maakond");
-JSONObject kandidaat=new JSONObject();
-kandidaat.put("firstName", eesnimi);
-kandidaat.put("lastName", perenimi);
-kandidaat.put("location", maakond);
-resp.getWriter().print(kandidaat);
-
-//resp.getWriter().print("{ " + "\"firstName\": " +"\"" + eesnimi + "\" , " + "\"lastName\": " + perenimi + "\"vanus\": " + vanus + "\"location\": " + linn);
-//resp.getWriter().print("{ " + "\"firstName\": " +"\"" + eesnimi + "\" , " + "\"lastName\": " +"\"" + perenimi + "\" , " + "\"location\": " +"\"" + maakond + "\"},");
-//"\"id\":" + id +
-//resp.getWriter().println("]");
-//resp.getWriter().println("}");
-// lastName = rs.getString("eesnimi");
-// resp.getWriter().println(guestName);
-
-/* resp.getWriter().println
-(
-"{" + """kandidaat""" +
-"name: Zara Ali," +
-"age: 67," +
-"sex: female," +
-"}"
-);
-/*
-{
-"kandidaat": [
-{ "id":"k1", "nimi":"John Doe" , "lastName":"Doe" , "location":"Harjumaa" , "lisainfo":"Tere minu nimi on see", "erakond":"Reformierakond", "haali": 12},
-]
-}
-*/	
-//
-}
-} catch (SQLException e) {
-// TODO Auto-generated catch block
-e.printStackTrace();
-}
-}
+	public void doGet(HttpServletRequest req, HttpServletResponse resp)
+			throws IOException {
+		resp.setContentType("text/plain");
+		
+		Connection c = null;
+		try {
+			c = DriverManager.getConnection("jdbc:google:rdbms://e-valimine2013:e-valimine/valimine");
+			ResultSet rs = c.createStatement().executeQuery("SELECT id,eesnimi,perenimi,vanus,linn,maakond FROM valijad;");
+			
+			Collection<Kandidaat> kandidaadid = new ArrayList<Kandidaat>();
+			while (rs.next()){
+				  String eesnimi = rs.getString("eesnimi");
+				  String perenimi = rs.getString("perenimi");
+				  String maakond = rs.getString("maakond");
+				  Kandidaat k = new Kandidaat(eesnimi, perenimi, maakond);
+				  kandidaadid.add(k);
+				  
+			}
+			resp.getWriter().print(new Gson().toJson(kandidaadid));
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
 }

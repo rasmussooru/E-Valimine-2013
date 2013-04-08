@@ -1,6 +1,6 @@
 $(document).ready(function () {
     $.getJSON("uustest", function (data) {
-        $.each(data, function (key, val) {
+        $.each(data, function (i, k) {
            
                 info = '<div id="kandidaat">' +
                     '<div id="piltjatekst">' +
@@ -9,9 +9,9 @@ $(document).ready(function () {
                     '</div>' +
 
                     '<div id="andmed">' +
-                    '<p>Nimi: ' + val + '</p>' +
-                    '<p>Perenimi: ' + val + '</p>' +
-                    '<p>Maakond: ' + val + '</p>' +
+                    '<p>Nimi: ' + k.eesnimi + '</p>' +
+                    '<p>Perenimi: ' + k.perenimi + '</p>' +
+                    '<p>Maakond: ' + k.maakond + '</p>' +
                     '</div>' +
                     '</div>' +
                     '<div id="nupp">' +
