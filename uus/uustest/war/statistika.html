@@ -1,111 +1,47 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Statistika</title>
-<link href="view/css/main.css" rel="stylesheet" type="text/css" />
-
-<link rel="stylesheet" media="print" href="view/css/print.css" type="text/css">
-
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
-<script type="text/javascript" src="https://www.google.com/jsapi"></script>
-<script type="text/javascript" src="js/statistika.js"></script>
-<script type="text/javascript" src="js/progressbar.js"></script>
-
-</head>
-<body>
-<div id="keha">
-<! --------------√úlemine osa, siia saab logo panna vajadusel----------->
-  <div id="top">
-       <h1>E-valimised 2013</h1>
-	   <div class="joon"></div>
-	   <div class="sisselogimine">
-	  <form name="form2" id="form2" class="form2" action="" method="post">
-      		<label for="kasutajanimi">Kasutajanimi</label>
-    		<input type="text"  name="kasutajanimi" id="kasutajanimi" />
-    		<label for="parool">Parool</label>
-    		<input type="text"  name="parool" id="parool" />
-    		</form>
-		
-
-	    <button onclick="document.getElementById('form2').style.display = 'none'; document.getElementById('kasutaja').style.display = 'block';">Logi sisse</button>
-		<button onclick="document.getElementById('form2').style.display = 'block'; document.getElementById('kasutaja').style.display = 'none';">Logi v√§lja</button>
-
-</div>
-<div id="kasutaja" style="display:none;">Oled sisse loginud <b><i>Test kasutajaga</i></b></div>
-</div><br>
-  <br>
- <! --------------Keskmine osa----------->
-<div id="middle">
-
+<div id="boxisisu">
 	
-<! --------------Keskmise ala vasak osa----------->
-    <div id="left">
-        
-		<ul>
-		<li><a href="info.html">Info</a></li>
-		<li><a href="haaleta.html">H&auml;&auml;leta</a> </li>
-		<li><a href="kandideeri.html">Kandideeri</a> </li>
-		<li><a href="kandidaadid.html">Kandidaadid</a></li>
-		<li><a href="statistika.html">Statistika</a></li>
-		</ul>
-    </div>  
-     <! --------------P√µhi osa----------->
-    <div id="pohi">
-	<div id="boxisisu">
-	
-	
-    	<h2>Statistika</h2>
+   	<h2>Statistika</h2>
     	
-		<div class="joon2 noPrint"></div>
+	<div class="joon2 noPrint"></div>
     	
-   		<div id="kandidaatidotsifilter">
-   			<table>
-			<tr>
-			<td>Erakond</td>
-			<td>
-				<select class="statFilter" id="statistikaErakonnad">
-					<option value="All">K√µik</option>
-					<option value="Keskerakond">Keskerakond</option>
-					<option value="Rohelised">Rohelised</option>
-					<option value="Reformierakond">Reformierakond</option>
-				</select>
-			</td>
-			<td>Maakond</td>
-			<td>
-				<select class="statFilter" id="statistikaMaakonnad">
-					<option value="All">K√µik</option>
-					<option value="Tartumaa">Tartumaa</option>
-					<option value="V√µrumaa">V√µrumaa</option>
-					<option value="Harjumaa">Harjumaa</option>
-				</select>
-			</td>
+	<div id="kandidaatidotsifilter">
+		<table>
+		<tr>
+		<td>Erakond</td>
+		<td>
+			<select class="statFilter" id="statistikaErakonnad">
+				<option value="All">Kıik</option>
+				<option value="Keskerakond">Keskerakond</option>
+				<option value="Rohelised">Rohelised</option>
+				<option value="Reformierakond">Reformierakond</option>
+			</select>
+		</td>
+		<td>Maakond</td>
+		<td>
+			<select class="statFilter" id="statistikaMaakonnad">
+				<option value="All">Kıik</option>
+				<option value="Tartumaa">Tartumaa</option>
+				<option value="Vırumaa">Vırumaa</option>
+				<option value="Harjumaa">Harjumaa</option>
+			</select>
+		</td>
 			
-			</tr>
-			</table>
-   		</div>
-    	<div id="testimage">
+		</tr>
+		</table>
+	</div>
+   	<div id="testimage">
 		
-		</div>
+	</div>
     	
-		<div id="diagramm" class="noPrint">
-		</div>
+	<div id="diagramm" class="noPrint">
+	</div>
 		
-		<div id="checkboxid" class="noPrint">
-		</div>
+	<div id="checkboxid" class="noPrint">
+	</div>
 		
-		<div class="joon2 noPrint"></div>
-		<br></br>
-		<div id="tabel">
-		</div>
+	<div class="joon2 noPrint"></div>
+	<br></br>
+	<div id="tabel">
+	</div>
 				
-    </div>
-
 </div>
-</div>
-</div>
-</div>
-</div>
-</body>
-
-</html>

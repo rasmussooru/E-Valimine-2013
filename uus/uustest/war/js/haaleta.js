@@ -1,4 +1,4 @@
-$(document).ready(function () {
+function haaleta_ready() {
     $.getJSON("uustest", function (data) {
         $.each(data, function (i, k) {
            
@@ -23,7 +23,7 @@ $(document).ready(function () {
         });
     });
 
-});
+};
 
 function showStuff(id) {
 document.getElementById(id).style.display = 'block';

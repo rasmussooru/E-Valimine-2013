@@ -1,50 +1,77 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>E-valimised 2013</title>
-<link href="view/css/main.css" rel="stylesheet" type="text/css" />
-
-
-</head>
-<body>
-<div id="keha">
-<! --------------Ülemine osa, siia saab logo panna vajadusel----------->
-  <div id="top">
-       <h1>E-valimised 2013</h1>
-	   <div class="joon"></div>
-  </div> 
- <! --------------Keskmine osa----------->
-<div id="middle">
-
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>E-valimised 2013</title>
+	<link href="view/css/main.css" rel="stylesheet" type="text/css" />
+	<link href="view/css/messages.css" rel="stylesheet" type="text/css" />
 	
-<! --------------Keskmise ala vasak osa----------->
-    <div id="left">
-        
-		<ul>
-		<li><a href="info.html">Info</a></li>
-		<li><a href="haaleta.html">H&auml;&auml;leta</a> </li>
-		<li><a href="kandideeri.html">Kandideeri</a> </li>
-		<li><a href="kandidaadid.html">Kandidaadid</a></li>
-		<li><a href="statistika.html">Statistika</a></li>
-		</ul>
-    </div> 
-     <! --------------Põhi osa----------->
-    <div id="pohi">
-		<div id="boxisisu">
-    	<h2>Index</h2>
-		<div class="joon2"></div>
-    	</div>
-    
-    	
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+	<script type="text/javascript" src="js/navmenu.js"></script>
+	<script type="text/javascript" src="js/haaleta.js"></script>
+	<script type="text/javascript" src="js/hidingstuff.js"></script>
+	<script type="text/javascript" src="js/test.js"></script>
+	<script type="text/javascript" src="js/messages.js"></script>
+	<script type="text/javascript" src="js/statistika.js"></script>
+	<script type="text/javascript" src="js/progressbar.js"></script>
+	
+</head>
 
+<body>
+
+	<div id="keha">
 		
-    </div>
+		<! --------------Ülemine osa, siia saab logo panna vajadusel----------->
+		<div id="top">
+			<h1>E-valimised 2013</h1>
+			
+			<div class="joon"></div>
+			
+			<div class="sisselogimine">
+				<form name="form2" id="form2" class="form2" action="" method="post">
+					<label for="kasutajanimi">Kasutajanimi</label>
+					<input type="text" name="kasutajanimi" id="kasutajanimi" />
+					<label for="parool">Parool</label>
+					<input type="text" name="parool" id="parool" />
+				</form>
+				<button onclick="document.getElementById('form2').style.display = 'none'; document.getElementById('kasutaja').style.display = 'block';">Logi sisse</button>
+				<button onclick="document.getElementById('form2').style.display = 'block'; document.getElementById('kasutaja').style.display = 'none';">Logi välja</button>
+			</div>
+			
+			<div id="kasutaja" style="display:none;">Oled sisse loginud <b><i>Test kasutajaga</i></b></div>
+		</div> 
+		
+		<br/>
+		<br/>
+		
+		<! --------------Keskmine osa----------->
+		<div id="middle">
+			<! --------------Keskmise ala vasak osa----------->
+			<div id="left">
+			
+				<ul>
+				<li id="info">Info</li>
+				<li id="haaleta">H&auml;&auml;leta</li>
+				<li id="kandideeri">Kandideeri</li>
+				<li id="kandidaadid">Kandidaadid</li>
+				<li id="statistika">Statistika</li>
+				</ul>
+			</div> 
+			
+			<! --------------Põhi osa----------->
+			<div id="pohi">
+				<div id="boxisisu">
+					<h2>Index</h2>
+					<div class="joon2"></div>
+				</div>
+			</div>
+			
+		</div>
+		
+	</div>
 
-</div>
- 
-
-</div>
 </body>
 
 </html>

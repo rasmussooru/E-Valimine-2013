@@ -1,30 +1,21 @@
 
-    // Load the Visualization API and the piechart package.
-	google.load('visualization', '1', {'packages':['table','corechart']});
-    // Set a callback to run when the Google Visualization API is loaded.
-    google.setOnLoadCallback(googleLoaded);
+function statistika_ready(){
 
-
-
-$(document).ready(function(){
-	$(".statFilter").change(function() {
+	addCheckboxes();
+	showImage();
+	drawTable();
+	drawChart();
+	
+	$(".statFilter").click(function() {
 		addCheckboxes();
 		showImage();
-		drawStuff();
+		drawTable();
+		drawChart();
 	});
-});
+	
+};
 
 
-$(document).ready(function(){
-});
-
-
-//$(document).ready(function(){
-	$(".filterCheckbox").click(function() {
-		showImage();
-		drawStuff();
-	});
-//});
 
 
 function resetFilters(){
@@ -34,15 +25,17 @@ function resetFilters(){
 
 
 function addCheckboxes(){
+	$("#checkboxid").empty();
 	var erakonnaFilter = document.getElementById("statistikaErakonnad").value;
 	var maakonnaFilter = document.getElementById("statistikaMaakonnad").value;
 	
 	$.getJSON("data/otsi.json", function (data){
 		$.each(data.kandidaat, function (i, k) {
-			$("[id=" + k.id+ "]").remove();
+			//$("[id=" + k.id+ "] firstChild").checked = 0;
+			//$("[id=" + k.id+ "]").remove();
 			if ((k.erakond == erakonnaFilter || erakonnaFilter == "All") && (k.location == maakonnaFilter || maakonnaFilter == "All")) {
 				var checBox = '<div id="'+ k.id +'">' + 
-					'<input class="filterCheckbox" type="checkbox" checked="1">'+ k.nimi +'<br>' +
+					'<input type="checkbox" checked="1" onClick="drawChart()">'+ k.nimi +'<br>' +
 					'</div>';
 				$(checBox).appendTo("#checkboxid");
 			}
@@ -55,15 +48,11 @@ function googleLoaded(){
 	resetFilters();
 	addCheckboxes();
 	showImage();
-	drawStuff();
+	drawTable();
 }
 
-function drawStuff(){
-	
-	var chartData = new google.visualization.DataTable();
-	chartData.addColumn('string', 'Nimi');
-	chartData.addColumn('number', 'Haali');
-	
+
+function drawTable(){
 	var tableData = new google.visualization.DataTable();
 	tableData.addColumn('string', 'Nimi');
 	tableData.addColumn('number', 'H‰‰li');
@@ -73,25 +62,42 @@ function drawStuff(){
 	
 	$.getJSON("data/otsi.json", function (data){
 		$.each(data.kandidaat, function (i, k) {
-			//alert(k.nimi + k.haali + k.erakond + k.location + k.id);
 			tableData.addRow([k.nimi, k.haali, k.erakond, k.location, k.id]);
-			chartData.addRow([k.nimi, k.haali]);
-			//alert(k.nimi + k.haali + k.erakond + k.location + k.id);
-			//var elem = $("[id=" + k.id+ "]");
-			//var s = elem.firstChild.is(:'checked');
-			//alert(s);
-			//if($("[id=" + k.id+ "]input").checked) {
-			//	alert(k.nimi + k.haali);
-			//	chartData.addRow([k.nimi, k.haali]);
-			//}
         });
 		var options = {};
-	    var chart = new google.visualization.PieChart(document.getElementById("diagramm"));
-	    chart.draw(chartData, options);
 	    var tabel = new google.visualization.Table(document.getElementById("tabel"));
 	    tabel.draw(tableData, options);
 	});
 	
+	
+};
+
+function drawChart(){
+
+
+	var chartData = new google.visualization.DataTable();
+	chartData.addColumn('string', 'Nimi');
+	chartData.addColumn('number', 'Haali');
+	
+	$.getJSON("data/otsi.json", function (data){
+		$.each(data.kandidaat, function (i, k) {
+
+//			alert("callback() called");
+			var temp = document.getElementById(k.id);
+//			var t1 = temp.checked;
+			
+			if(document.getElementById(k.id)) {
+				if(document.getElementById(k.id).firstChild.checked) {
+					chartData.addRow([k.nimi, k.haali]);
+				}
+			}
+        });
+		var options = {};
+	    var chart = new google.visualization.PieChart(document.getElementById("diagramm"));
+	    chart.draw(chartData, options);
+	});
+	
+
 	
 };
 

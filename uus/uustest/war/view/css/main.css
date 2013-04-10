@@ -30,41 +30,6 @@ h2 {
 	font-size: 25px;
 }
 
-#info {
-	margin-left: 65px;
-	margin-top: 100px;
-	border-bottom: #fff solid;
-	border-top: #fff solid;
-	border-width: 1px;
-}
-
-#haaleta {
-	margin-left: 65px;
-	margin-top: 8px;
-	a: link color:#ffffff;
-	a: visited color:#00FF00;
-}
-
-#kandideeri {
-	margin-left: 65px;
-	margin-top: 8px;
-}
-
-#kandidaadid {
-	margin-left: 65px;
-	margin-top: 8px;
-}
-
-#reaalaeg {
-	margin-left: 65px;
-	margin-top: 8px;
-}
-
-#statistika {
-	margin-left: 65px;
-	margin-top: 8px;
-}
-
 #keha {
 	width: 1000px;
 	margin: 10px auto;
@@ -420,16 +385,4 @@ p {
 	width: 120px;
 	float: left;
 	margin-left: 40px;
-}
-
-#testimage {
-	width: 700px; /* width of image **/
-	height: 500px; /* or height of image**/
-	display: none;
-	background-image: url('../images/progress.png');
-}
-
-#sisselogimine {
-	width: 700px;
-	height: 500px;
 }
