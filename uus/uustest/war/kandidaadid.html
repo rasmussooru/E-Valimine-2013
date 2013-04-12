@@ -1,50 +1,46 @@
     
     	<div id="boxisisu">
     		<h2>Kandidaadid</h2>
+    		
+			<p><a href="#" onclick="showStuff('answer1'); return false;">H‰‰leta</a><br>
+			<p><a href="#" onclick="hideStuff('answer1'); return false;">Vıta h‰‰l tagasi</a><br>
+			<h3><span id="answer1" style="display: none;">H‰‰letatud!!!</span></p><br></h3>
+	
 			<div class="joon2"></div>
-    		<div id="kandidaatiotsiinfo"> 
-    			<p>Saamaks teada rohkem infot kandidaatite kohta kasuta otsimis funktsiooni mis asub all.</p>
-    		</div>
     		<div id="kandidaatidotsifilter">
     			
     		<table>
 				
    			<tr>
-  			<td>Erakond</td>
-  			<td><form name = "erakonnad" action="">
-				<select id="select">
+			<td>Erakond</td>
+			<td>
+				<select class="statFilter" id="statistikaErakonnad">
 					<option value="All">Kıik</option>
 					<option value="Keskerakond">Keskerakond</option>
 					<option value="Rohelised">Rohelised</option>
 					<option value="Reformierakond">Reformierakond</option>
-				 </select>			
-			</form>
+				</select>
 			</td>
-  			<td>Maakond</td>
- 			<td><form name = "maakonnad" action="">
-				<select id="valik">
+			<td>Maakond</td>
+			<td>
+				<select class="statFilter" id="statistikaMaakonnad">
 					<option value="All">Kıik</option>
 					<option value="Tartumaa">Tartumaa</option>
-					<option value="V&otilde;rumaa">Vırumaa</option>
+					<option value="Vırumaa">Vırumaa</option>
 					<option value="Harjumaa">Harjumaa</option>
-				 </select>	
-				 
+				</select>
 			</td>
 			<td>
 			<label for="otsikandidaati">Nimi</label>
     		<td><input type="text"  name="otsikandidaati" id="otsikandidaati" /></td>
 			</td>
-			</tr>		
-			</form>
-			
-			</td>
-			<td>
-			<input type="button" id="button" value="Otsi" />
-			</td>
-			</tr>
 			</table><br>
 				<br><br>
     		</div><br>
+    		
+    		<div id="kandidaadibox">
+    		
+    		</div>
     
     	
     	</div>

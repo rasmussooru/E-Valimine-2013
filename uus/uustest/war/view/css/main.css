@@ -379,6 +379,7 @@ p {
 
 #left ul li:hover {
 	background-color: #3A75C4;
+	cursor:pointer;
 }
 
 #checkboxid {

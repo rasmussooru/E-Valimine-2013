@@ -1,12 +1,67 @@
-$(document).ready(function () {
-    $.getJSON("data/otsi.json", function (data) {
+function kandidaadid_ready() {
+	fillCandidates();
+	
+    /* 
+     $.getJSON("data/otsi.json", function (data) {
         $("#button").click(function () {
             $.each(data.kandidaat, function (i, kandidaat) {
                 $('#kandidaadibox').remove();
             });
         })
     });
-});
+    */
+	
+    $(".statFilter").unbind("change").change(function() {
+    	$("#kandidaadibox").empty();
+    	
+    	fillCandidates();
+    	/*
+		addCheckboxes();
+		showImage();
+		drawTable();
+		drawChart();
+		*/
+	});
+};
+
+
+function fillCandidates() {
+
+	var erakonnaFilter = document.getElementById("statistikaErakonnad").value;
+	var maakonnaFilter = document.getElementById("statistikaMaakonnad").value;
+	
+    $.getJSON("uustest", function (data) {
+        $.each(data, function (i, k) {
+
+        	if ((k.erakond == erakonnaFilter || erakonnaFilter == "All") && (k.maakond == maakonnaFilter || maakonnaFilter == "All")) {
+        		var info = getInfo(i, k);
+        		$(info).appendTo("#kandidaadibox");
+        	}
+        	
+        });
+    });
+}
+
+function getInfo(i, k){
+	var info = '<div id="kandidaat">' +
+		'<div id="piltjatekst">' +
+		'<div id="pilt">' +
+		'<img alt="Pilt" src="view/images/kandidaadid/placeholder1.jpg">' +
+		'</div>' +
+
+		'<div id="andmed">' +
+		'<p>Nimi: ' + k.eesnimi + '</p>' +
+		'<p>Perenimi: ' + k.perenimi + '</p>' +
+		'<p>Maakond: ' + k.maakond + '</p>' +
+		'</div>' +
+		'</div>' +
+		'<div id="nupp">' +
+		'<form><input type="checkbox" name="fakeh22l" value="h22l"></form>'+
+		'</div>' +
+		'</div>';
+	
+	return info;
+}
 
 $(document).ready(function () {
 	/*

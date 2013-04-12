@@ -6,7 +6,7 @@ function statistika_ready(){
 	drawTable();
 	drawChart();
 	
-	$(".statFilter").click(function() {
+	$(".statFilter").unbind("change").change(function() {
 		addCheckboxes();
 		showImage();
 		drawTable();
@@ -14,8 +14,6 @@ function statistika_ready(){
 	});
 	
 };
-
-
 
 
 function resetFilters(){
