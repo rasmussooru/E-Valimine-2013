@@ -1,8 +1,0 @@
-{
-"kandidaat": 
-[
-{ "firstName":"John" , "lastName":"Doe" , "location":"Tartumaa"},
-{ "firstName":"Anna" , "lastName":"Smith" , "location":"Tartumaa"},
-{ "firstName":"Peter" , "lastName":"Jones" , "location":"Harjumaa"}
-]
-}

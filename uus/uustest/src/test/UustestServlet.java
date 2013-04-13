@@ -41,7 +41,12 @@ public class UustestServlet extends HttpServlet {
 		Connection c = null;
 		try {
 			c = DriverManager.getConnection("jdbc:google:rdbms://e-valimine2013:e-valimine/valimine");
-			ResultSet rs = c.createStatement().executeQuery("SELECT id,eesnimi,perenimi,erakond,maakond FROM kandidaadid;");
+			String values = "'k' + k.id,k.eesnimi,k.perenimi,k.erakond,";
+			values = values + "k.maakond,COUNT(v.kandidaat) AS votes";
+			String tableJoin = "kandidaadid k LEFT JOIN haaled v ON k.id = v.kandidaat";
+			String query = "SELECT " + values + " FROM " + tableJoin + " GROUP BY k.id";
+			System.out.println(query);
+			ResultSet rs = c.createStatement().executeQuery(query);
 			
 			Collection<Kandidaat> kandidaadid = new ArrayList<Kandidaat>();
 			while (rs.next()){
@@ -49,9 +54,10 @@ public class UustestServlet extends HttpServlet {
 				  String perenimi = rs.getString("perenimi");
 				  String maakond = rs.getString("maakond");
 				  String erakond = rs.getString("erakond");
-				  Kandidaat k = new Kandidaat(eesnimi, perenimi, maakond, erakond);
+				  String id = rs.getString(1);
+				  int votes = rs.getInt("votes");
+				  Kandidaat k = new Kandidaat(eesnimi, perenimi, maakond, erakond, id, votes);
 				  kandidaadid.add(k);
-				  
 			}
 			resp.getWriter().print(new Gson().toJson(kandidaadid));
 		} catch (SQLException e) {
