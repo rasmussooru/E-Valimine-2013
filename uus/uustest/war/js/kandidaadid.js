@@ -1,26 +1,11 @@
 function kandidaadid_ready() {
 	fillCandidates();
-	
-    /* 
-     $.getJSON("data/otsi.json", function (data) {
-        $("#button").click(function () {
-            $.each(data.kandidaat, function (i, kandidaat) {
-                $('#kandidaadibox').remove();
-            });
-        })
-    });
-    */
-	
+
     $(".statFilter").unbind("change").change(function() {
     	$("#kandidaadibox").empty();
     	
     	fillCandidates();
-    	/*
-		addCheckboxes();
-		showImage();
-		drawTable();
-		drawChart();
-		*/
+    	
 	});
 };
 
@@ -43,23 +28,22 @@ function fillCandidates() {
 }
 
 function getInfo(i, k){
-	var info = '<div id="kandidaat">' +
-		'<div id="piltjatekst">' +
-		'<div id="pilt">' +
-		'<img alt="Pilt" src="view/images/kandidaadid/placeholder1.jpg">' +
+	var info = '' +
+	'<div class="kandidaat">' +
+		'<div class="piltjatekst">' +
+			'<div class="pilt">' +
+				'<img alt="Pilt" src="view/images/kandidaadid/placeholder1.jpg">' +
+			'</div>' +
+			'<div class="andmed">' +
+				'<p> Nimi: ' + k.eesnimi + " " +  k.perenimi + '</p>' +
+				'<p> Maakond: ' + k.maakond + '</p>' +
+				'<p> Erakond: ' + k.erakond + '</p>' +
+			'</div>' +
 		'</div>' +
-
-		'<div id="andmed">' +
-		'<p>Nimi: ' + k.eesnimi + '</p>' +
-		'<p>Perenimi: ' + k.perenimi + '</p>' +
-		'<p>Maakond: ' + k.maakond + '</p>' +
-		'<p>Erakond: ' + k.erakond + '</p>' +
+		'<div class="nupp">' +
+			'<form><input type="checkbox" name="fakeh22l" value="h22l"></form>'+
 		'</div>' +
-		'</div>' +
-		'<div id="nupp">' +
-		'<form><input type="checkbox" name="fakeh22l" value="h22l"></form>'+
-		'</div>' +
-		'</div>';
+	'</div>';
 	
 	return info;
 }
@@ -130,103 +114,3 @@ $(document).ready(function () {
 	});
 	}
 	});
-
-
-
-
-
-
-$(document).ready(function () {
-    $("#button").click(function () {
-
-        $.getJSON("data/otsi.json", function (data) {
-            $('select#select').ready(function () {
-                var selected = $(this).find('#select option:selected');
-                var test = selected.val();
-
-
-                $('select#valik').ready(function () {
-                    var selected1 = $(this).find('#valik option:selected');
-                    var test1 = selected1.val();
-
-
-                    $.each(data.kandidaat, function (i, kandidaat) {
-                        if (test != 'All' && test1 == 'All') {
-                            if (kandidaat.erakond == test) {
-                                info = '<div id="kandidaadibox">' +
-                                    '<div id="kandidaadipilt">' +
-                                    '<img alt="Andrus Ansip" src="view/images/kandidaadid/andrus.jpg">' +
-                                    '</div>' +
-                                    '<div id="kandidaadiandmed">' +
-                                    '<p>Nimi: ' + kandidaat.nimi + '</p>' +
-                                    '<p>Asukoht: ' + kandidaat.location + '</p>' +
-                                    '<p>Erakond: ' + kandidaat.erakond + '</p>' +
-                                    '<p>Lisainfo: ' + kandidaat.lisainfo + '</p>' +
-
-                                    '</div>' +
-                                    '</div>' +
-                                    '</div>';
-                                $(info).appendTo("#boxisisu");
-                            }
-                        }
-
-                        if (test == 'All' && test1 != 'All') {
-                            if (kandidaat.location == test1) {
-                                info = '<div id="kandidaadibox">' +
-                                    '<div id="kandidaadipilt">' +
-                                    '<img alt="Andrus Ansip" src="view/images/kandidaadid/andrus.jpg">' +
-                                    '</div>' +
-                                    '<div id="kandidaadiandmed">' +
-                                    '<p>Nimi: ' + kandidaat.nimi + '</p>' +
-                                    '<p>Asukoht: ' + kandidaat.location + '</p>' +
-                                    '<p>Erakond: ' + kandidaat.erakond + '</p>' +
-                                    '<p>Lisainfo: ' + kandidaat.lisainfo + '</p>' +
-
-                                    '</div>' +
-                                    '</div>' +
-                                    '</div>';
-                                $(info).appendTo("#boxisisu");
-                            }
-                        }
-
-                        if (test != 'All' && test1 != 'All') {
-                            if (kandidaat.location == test1 && kandidaat.erakond == test) {
-                                info = '<div id="kandidaadibox">' +
-                                    '<div id="kandidaadipilt">' +
-                                    '<img alt="Andrus Ansip" src="view/images/kandidaadid/andrus.jpg">' +
-                                    '</div>' +
-                                    '<div id="kandidaadiandmed">' +
-                                    '<p>Nimi: ' + kandidaat.nimi + '</p>' +
-                                    '<p>Asukoht: ' + kandidaat.location + '</p>' +
-                                    '<p>Erakond: ' + kandidaat.erakond + '</p>' +
-                                    '<p>Lisainfo: ' + kandidaat.lisainfo + '</p>' +
-
-                                    '</div>' +
-                                    '</div>' +
-                                    '</div>';
-                                $(info).appendTo("#boxisisu");
-                            }
-                        } else if (test == 'All' && test1 == 'All') {
-                            info = '<div id="kandidaadibox">' +
-                                '<div id="kandidaadipilt">' +
-                                '<img alt="Andrus Ansip" src="view/images/kandidaadid/andrus.jpg">' +
-                                '</div>' +
-                                '<div id="kandidaadiandmed">' +
-                                '<p>Nimi: ' + kandidaat.nimi + '</p>' +
-                                '<p>Asukoht: ' + kandidaat.location + '</p>' +
-                                '<p>Erakond: ' + kandidaat.erakond + '</p>' +
-                                '<p>Lisainfo: ' + kandidaat.lisainfo + '</p>' +
-
-                                '</div>' +
-                                '</div>' +
-                                '</div>';
-                            $(info).appendTo("#boxisisu");
-
-                        }
-                    });
-                });
-
-            });
-        })
-    });
-});
