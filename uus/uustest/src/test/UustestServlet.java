@@ -41,7 +41,7 @@ public class UustestServlet extends HttpServlet {
 		Connection c = null;
 		try {
 			c = DriverManager.getConnection("jdbc:google:rdbms://e-valimine2013:e-valimine/valimine");
-			ResultSet rs = c.createStatement().executeQuery("SELECT id,eesnimi,perenimi,erakond,maakond FROM valijad;");
+			ResultSet rs = c.createStatement().executeQuery("SELECT id,eesnimi,perenimi,erakond,maakond FROM kandidaadid;");
 			
 			Collection<Kandidaat> kandidaadid = new ArrayList<Kandidaat>();
 			while (rs.next()){
