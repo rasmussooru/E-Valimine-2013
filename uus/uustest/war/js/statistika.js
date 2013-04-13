@@ -2,13 +2,13 @@
 function statistika_ready(){
 
 	addCheckboxes();
-	showImage();
+	//showImage();
 	drawTable();
 	drawChart();
 	
 	$(".statFilter").unbind("change").change(function() {
 		addCheckboxes();
-		showImage();
+		//showImage();
 		drawTable();
 		drawChart();
 	});
@@ -42,14 +42,6 @@ function addCheckboxes(){
 }
 
 
-function googleLoaded(){
-	resetFilters();
-	addCheckboxes();
-	showImage();
-	drawTable();
-}
-
-
 function drawTable(){
 	var tableData = new google.visualization.DataTable();
 	tableData.addColumn('string', 'Nimi');
@@ -79,11 +71,6 @@ function drawChart(){
 	
 	$.getJSON("data/otsi.json", function (data){
 		$.each(data.kandidaat, function (i, k) {
-
-//			alert("callback() called");
-			var temp = document.getElementById(k.id);
-//			var t1 = temp.checked;
-			
 			if(document.getElementById(k.id)) {
 				if(document.getElementById(k.id).firstChild.checked) {
 					chartData.addRow([k.nimi, k.haali]);
@@ -98,16 +85,3 @@ function drawChart(){
 
 	
 };
-
-function showImage()
-{
-	var elem = document.getElementById('testimage');
-	elem.style.display = 'block';
-	setTimeout("hideImage()", 4000);
-}
-
-function hideImage()
-{
-	var elem = document.getElementById('testimage');
-	elem.style.display = 'none';
-}
