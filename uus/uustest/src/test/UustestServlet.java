@@ -45,7 +45,6 @@ public class UustestServlet extends HttpServlet {
 			values = values + "k.maakond,COUNT(v.kandidaat) AS votes";
 			String tableJoin = "kandidaadid k LEFT JOIN haaled v ON k.id = v.kandidaat";
 			String query = "SELECT " + values + " FROM " + tableJoin + " GROUP BY k.id";
-			System.out.println(query);
 			ResultSet rs = c.createStatement().executeQuery(query);
 			
 			Collection<Kandidaat> kandidaadid = new ArrayList<Kandidaat>();

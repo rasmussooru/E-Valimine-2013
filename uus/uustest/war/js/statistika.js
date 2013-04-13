@@ -27,13 +27,13 @@ function addCheckboxes(){
 	var erakonnaFilter = document.getElementById("statistikaErakonnad").value;
 	var maakonnaFilter = document.getElementById("statistikaMaakonnad").value;
 	
-	$.getJSON("data/otsi.json", function (data){
-		$.each(data.kandidaat, function (i, k) {
+	$.getJSON("uustest", function (data){
+		$.each(data, function (i, k) {
 			//$("[id=" + k.id+ "] firstChild").checked = 0;
 			//$("[id=" + k.id+ "]").remove();
-			if ((k.erakond == erakonnaFilter || erakonnaFilter == "All") && (k.location == maakonnaFilter || maakonnaFilter == "All")) {
+			if ((k.erakond == erakonnaFilter || erakonnaFilter == "All") && (k.maakond == maakonnaFilter || maakonnaFilter == "All")) {
 				var checBox = '<div id="'+ k.id +'">' + 
-					'<input type="checkbox" checked="1" onClick="drawChart()">'+ k.nimi +'<br>' +
+					'<input type="checkbox" checked="1" onClick="drawChart()">'+ k.eesnimi + " " + k.perenimi +'<br>' +
 					'</div>';
 				$(checBox).appendTo("#checkboxid");
 			}
@@ -50,9 +50,9 @@ function drawTable(){
 	tableData.addColumn('string', 'Piirkond');
 	tableData.addColumn('string', 'Id');
 	
-	$.getJSON("data/otsi.json", function (data){
-		$.each(data.kandidaat, function (i, k) {
-			tableData.addRow([k.nimi, k.haali, k.erakond, k.location, k.id]);
+	$.getJSON("uustest", function (data){
+		$.each(data, function (i, k) {
+			tableData.addRow([k.eesnimi + " " + k.perenimi, k.votes, k.erakond, k.maakond, k.id]);
         });
 		var options = {};
 	    var tabel = new google.visualization.Table(document.getElementById("tabel"));
@@ -69,11 +69,12 @@ function drawChart(){
 	chartData.addColumn('string', 'Nimi');
 	chartData.addColumn('number', 'Haali');
 	
-	$.getJSON("data/otsi.json", function (data){
-		$.each(data.kandidaat, function (i, k) {
+	$.getJSON("uustest", function (data){
+		$.each(data, function (i, k) {
 			if(document.getElementById(k.id)) {
 				if(document.getElementById(k.id).firstChild.checked) {
-					chartData.addRow([k.nimi, k.haali]);
+					var name = k.eesnimi + " " + k.perenimi;
+					chartData.addRow([k.eesnimi + " " + k.perenimi, k.votes]);
 				}
 			}
         });
