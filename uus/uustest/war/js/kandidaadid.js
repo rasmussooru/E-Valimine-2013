@@ -53,6 +53,7 @@ function getInfo(i, k){
 		'<p>Nimi: ' + k.eesnimi + '</p>' +
 		'<p>Perenimi: ' + k.perenimi + '</p>' +
 		'<p>Maakond: ' + k.maakond + '</p>' +
+		'<p>Erakond: ' + k.erakond + '</p>' +
 		'</div>' +
 		'</div>' +
 		'<div id="nupp">' +

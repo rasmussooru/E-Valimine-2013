@@ -41,14 +41,15 @@ public class UustestServlet extends HttpServlet {
 		Connection c = null;
 		try {
 			c = DriverManager.getConnection("jdbc:google:rdbms://e-valimine2013:e-valimine/valimine");
-			ResultSet rs = c.createStatement().executeQuery("SELECT id,eesnimi,perenimi,vanus,linn,maakond FROM valijad;");
+			ResultSet rs = c.createStatement().executeQuery("SELECT id,eesnimi,perenimi,erakond,maakond FROM valijad;");
 			
 			Collection<Kandidaat> kandidaadid = new ArrayList<Kandidaat>();
 			while (rs.next()){
 				  String eesnimi = rs.getString("eesnimi");
 				  String perenimi = rs.getString("perenimi");
 				  String maakond = rs.getString("maakond");
-				  Kandidaat k = new Kandidaat(eesnimi, perenimi, maakond);
+				  String erakond = rs.getString("erakond");
+				  Kandidaat k = new Kandidaat(eesnimi, perenimi, maakond, erakond);
 				  kandidaadid.add(k);
 				  
 			}

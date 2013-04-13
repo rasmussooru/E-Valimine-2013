@@ -11,6 +11,9 @@ $(document).ready(function(){
     		if(window[menuItem + "_ready"]()) window[menuItem + "_ready"]();
     	});
     });
+    
+    //Load info
+    $("#pohi").load("info.html");
 });
 
 function customCallBack(){
