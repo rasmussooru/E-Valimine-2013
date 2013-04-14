@@ -3,6 +3,7 @@ package test;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -25,7 +26,8 @@ public class KandideeriServlet extends HttpServlet{
 
 			String values = "'" + erakond + "','" + eesnimi + "','" + perenimi + "','" + maakond + "'";
 			String query = "INSERT INTO kandidaadid (erakond,eesnimi,perenimi,maakond) VALUES(" + values + ")";
-			c.createStatement().executeQuery(query);
+			@SuppressWarnings("unused")
+			ResultSet rs = c.createStatement().executeQuery(query);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
