@@ -4,49 +4,46 @@
     <div id="inner">
     <div id="registration">
 	
-		<form name="form" id="form" class="form" action="" onsubmit="return validate(this)" method="post">
-    
-    	<label for="name">Eesnimi:*</label>
-    	<input type="text" placeholder="Eesnimi" name="name" id="name" /></br></br>
-    	<label for="family" >Perenimi:*</label>
-    	<input type="text" placeholder="Perekonnanimi" name="family" id="family" /></br></br>
-    	<label for="gender">Sugu:*</label>
-    	<select name="gender" id="gender">
-    	<option value =""></option>
-    	<option value ="male">Mees</option>
-    	<option value ="female">Naine</option>
-    	</select><br></br>
-    	<label for="email">Email:*</label>
-    	<input type="text" placeholder="nimi@domeen.ee" name="email" id="email"/></br></br>
-    	<label for="phone">Telefon:*</label>
-    	<input type="text" name="phone" id="phone" /></br></br>
-    	<label for="erakond">Erakond:*</label>
-    	<select name="erakond" id="erakond">
-    	<option value =""></option>
-    	<option value ="reform">Reformierakond</option>
-    	<option value ="irl">Isamaa ja Respublica Liit</option>
-    	<option value ="kesk">Keskerakond</option>
-    	<option value ="rohelised">Rohelised</option>
-    	<option value ="sots">Sotsiaaldemokraadid</option>
-    	</select><br></br>
-    	<label for="piirkond">Piirkond:*</label>
-    	<select name="piirkond" id="piirkond">
-    	<option value =""></option>
-    	<option value ="tartu">Tartumaa</option>
-    	<option value ="harju">Harjumaa</option>
-    	<option value ="saare">Saaremaa</option>
-    	<option value ="idaviru">Ida-Virumaa</option>
-    	</select><br></br>
-    	<label for="veeb">Veebileht:</label>
-    	<input type="text" name="veeb" id="veeb" /></br></br>
-    	<label for="message">L&uuml;hitutvustus:*</label></br></br>
-    	<textarea name="message" id="message" cols="40" rows="6"/></textarea><br></br>
-    	<button class="submit" type="submit">Lae pilt ...</button>
-    	<button class="submit" type="submit">Registreeri</button>
-    
-  
-
-  		</form><br></br>
+		<form name="form" id="form" class="form" action="/kandideeri" onsubmit="return validate(this)" method="post">
+    		<label for="name">Eesnimi:*</label>
+    		<input type="text" placeholder="Eesnimi" name="name" id="name" /></br></br>
+    		<label for="family" >Perenimi:*</label>
+	    	<input type="text" placeholder="Perekonnanimi" name="family" id="family" /></br></br>
+    		<label for="gender">Sugu:*</label>
+    		<select name="gender" id="gender">
+	    	<option value =""></option>
+    		<option value ="male">Mees</option>
+    		<option value ="female">Naine</option>
+	    	</select><br></br>
+    		<label for="email">Email:*</label>
+    		<input type="text" placeholder="nimi@domeen.ee" name="email" id="email"/></br></br>
+	    	<label for="phone">Telefon:*</label>
+    		<input type="text" name="phone" id="phone" /></br></br>
+    		<label for="erakond">Erakond:*</label>
+	    	<select name="erakond" id="erakond">
+	    		<option></option>
+				<option value="Kerakond">Kerakond</option>
+				<option value="Rohekond">Rohekond</option>
+				<option value="Orakond">Orakond</option>
+				<option value="Punakond">Punakond</option>
+				<option value="Sinikond">Sinikond</option>
+			</select>
+    		<br></br>
+    		<label for="piirkond">Piirkond:*</label>    	
+			<select name="piirkond" id="piirkond">
+	    		<option></option>
+				<option value="Tartumaa">Tartumaa</option>
+				<option value="Võrumaa">Võrumaa</option>
+				<option value="Harjumaa">Harjumaa</option>
+			</select>
+			<br></br>
+    		<label for="veeb">Veebileht:</label>
+	    	<input type="text" name="veeb" id="veeb" /></br></br>
+    		<label for="message">L&uuml;hitutvustus:*</label></br></br>
+    		<textarea name="message" id="message" cols="40" rows="6"/></textarea><br></br>
+	    	<button class="submit" type="submit">Lae pilt ...</button>
+    		<button class="submit" type="submit">Registreeri</button>
+    	</form><br></br>
 
 	</div>
 	</div>

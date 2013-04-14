@@ -8,14 +8,24 @@ $(document).ready(function(){
     	$("#pohi").empty();
     	var menuItem = $(this).attr("id")
     	$("#pohi").load(menuItem + ".html", function(response, status, xhr){
+    		location.hash = menuItem;
     		if(window[menuItem + "_ready"]()) window[menuItem + "_ready"]();
     	});
     });
     
     //Load info
-    $("#pohi").load("info.html");
+
+    if (location.hash != '') {
+    	var menuItem = String(location.hash).substr(1);
+    	$("#pohi").load(menuItem + ".html", function(response, status, xhr) {
+    		if(window[menuItem + "_ready"]()) window[menuItem + "_ready"]();
+    	});
+    }
+    else {
+    	$("#pohi").load("info.html");
+		location.hash = "info";
+    }
 });
 
 function customCallBack(){
 }
-

@@ -22,4 +22,12 @@
 		<servlet-name>SystemServiceServlet</servlet-name>
 		<url-pattern>/_ah/spi/*</url-pattern>
 	</servlet-mapping>
+	<servlet>
+		<servlet-name>Kandideeri</servlet-name>
+		<servlet-class>test.KandideeriServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Kandideeri</servlet-name>
+		<url-pattern>/kandideeri</url-pattern>
+	</servlet-mapping>
 </web-app>
