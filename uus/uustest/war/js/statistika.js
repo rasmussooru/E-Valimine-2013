@@ -2,15 +2,10 @@
 function statistika_ready(){
 
 	addCheckboxes();
-	//showImage();
 	drawTable();
-	drawChart();
 	
 	$(".statFilter").unbind("change").change(function() {
 		addCheckboxes();
-		//showImage();
-		drawTable();
-		drawChart();
 	});
 	
 };
@@ -29,8 +24,6 @@ function addCheckboxes(){
 	
 	$.getJSON("uustest", function (data){
 		$.each(data, function (i, k) {
-			//$("[id=" + k.id+ "] firstChild").checked = 0;
-			//$("[id=" + k.id+ "]").remove();
 			if ((k.erakond == erakonnaFilter || erakonnaFilter == "All") && (k.maakond == maakonnaFilter || maakonnaFilter == "All")) {
 				var checBox = '<div id="'+ k.id +'">' + 
 					'<input type="checkbox" checked="1" onClick="drawChart()">'+ k.eesnimi + " " + k.perenimi +'<br>' +
@@ -38,7 +31,9 @@ function addCheckboxes(){
 				$(checBox).appendTo("#checkboxid");
 			}
         });
-	})
+		drawChart();
+	});
+
 }
 
 
