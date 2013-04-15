@@ -28,6 +28,11 @@ function fillCandidates() {
 }
 
 function getInfo(i, k){
+	var tekst = "Anna punkt";
+	//selleVandiValik tuleks t‰ita logimisel ja h‰‰letamisel
+	if (k.id == selleVandiValik) {
+		tekst = "Kustuta punkt";
+	}
 	var info = '' +
 	'<div class="kandidaat">' +
 		'<div class="piltjatekst">' +
@@ -35,18 +40,36 @@ function getInfo(i, k){
 				'<img alt="Pilt" src="view/images/kandidaadid/placeholder1.jpg">' +
 			'</div>' +
 			'<div class="andmed">' +
+				'<p> Id: ' + k.id + '</p>' +
 				'<p> Nimi: ' + k.eesnimi + " " +  k.perenimi + '</p>' +
 				'<p> Maakond: ' + k.maakond + '</p>' +
 				'<p> Erakond: ' + k.erakond + '</p>' +
 			'</div>' +
 		'</div>' +
 		'<div class="nupp">' +
-			'<form><input type="checkbox" name="fakeh22l" value="h22l"></form>'+
+			'<button class="annaHaal">' + tekst + '</button>'+
 		'</div>' +
 	'</div>';
 	
 	return info;
 }
+
+
+$(document).on("click", ".annaHaal", function(){
+	var btnText = $(this).text();
+	if (btnText == "Anna punkt") {
+		var kandidaadiNumber = $(this).parent().parent().find('.andmed').find(":first-child").text().match(/\d+$/)[0];
+		alert("Annad punkti kandidaadile # " + kandidaadiNumber + ".");
+		selleVandiValik = kandidaadiNumber;
+		$(".annaHaal").text("Anna punkt");
+		$(this).text("Kustuta punkt");
+	} else {
+		alert("Kustutan");
+		selleVandiValik = "";
+		$(this).text("Anna punkt");
+	}
+});
+
 
 $(document).ready(function () {
 	/*

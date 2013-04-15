@@ -3,6 +3,9 @@ google.load('visualization', '1', {'packages':['table','corechart']});
 // Set a callback to run when the Google Visualization API is loaded.
 google.setOnLoadCallback(customCallBack);
 
+var selleVandiValik = 2;
+var screenName = "KeegiEiTea";
+
 $(document).ready(function(){
     $("#left li").click(function(){
     	$("#pohi").empty();
