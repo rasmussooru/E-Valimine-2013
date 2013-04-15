@@ -35,7 +35,7 @@ offline.appcache
 
 # Resources that require the user to be online.
 NETWORK:
-
+*
 
 # static.html will be served if main.py is inaccessible
 # offline.jpg will be served in place of all images in images/large/
