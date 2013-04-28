@@ -381,3 +381,21 @@ p {
 	float: left;
 	margin-left: 40px;
 }
+
+#kaart {
+	width:620px;
+	height:440px;
+	margin-bottom: 10px;
+}
+ .labels {
+   background-color: rgba(127, 127, 127, 0.75);
+   font-family: "Lucida Grande", "Arial", sans-serif;
+   font-size: 15px;
+   font-style: "bold"; 
+   white-space: nowrap;
+ }
+ 
+ #legend {
+    background-color: rgba(127, 127, 127, 0.75);
+    padding: 10px;
+  }
