@@ -1,5 +1,3 @@
-<meta http-equiv="cache-control" content="public">
-<meta http-equiv="expires" content="Mon, 22 Jul 2013 12:00:00 GMT">
 
 /*! jQuery v1.9.1 | (c) 2005, 2012 jQuery Foundation, Inc. | jquery.org/license
 //@ sourceMappingURL=jquery.min.map
