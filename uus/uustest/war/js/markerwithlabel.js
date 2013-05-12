@@ -1,3 +1,6 @@
+<meta http-equiv="cache-control" content="public">
+<meta http-equiv="expires" content="Mon, 22 Jul 2013 12:00:00 GMT">
+
 /**
  * @name MarkerWithLabel for V3
  * @version 1.0.1 [September 17, 2010]

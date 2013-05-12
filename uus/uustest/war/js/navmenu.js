@@ -1,3 +1,6 @@
+<meta http-equiv="cache-control" content="public">
+<meta http-equiv="expires" content="Mon, 22 Jul 2013 12:00:00 GMT">
+
 // Load the Visualization API and the piechart package.
 google.load('visualization', '1', {'packages':['table','corechart']});
 // Set a callback to run when the Google Visualization API is loaded.

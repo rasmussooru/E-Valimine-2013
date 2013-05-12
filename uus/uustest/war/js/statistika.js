@@ -1,3 +1,5 @@
+<meta http-equiv="cache-control" content="public">
+<meta http-equiv="expires" content="Mon, 22 Jul 2013 12:00:00 GMT">
 
 function statistika_ready(){
 
