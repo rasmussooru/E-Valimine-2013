@@ -1,0 +1,5 @@
+HTML errorid seotud :
+1. cache manifestiga, ei hakka torkima, et mitte midagi ära lõhkuda.
+2. facebook loginiga, ei hakka torkima, et mitte midagi ära lõhkuda.
+CSS errorid seotud kandideerimis avalduse verifitseerimisega, ei hakka torkima, et mitte midagi ära lõhkuda.
+JSLint errorid seotud stiiliga, mulle meeldib niimoodi nagu praegu on. Ei näe mõtet hakata tabide asemel tühikuid panema ega ) ja { vahele tühikuid lisama.

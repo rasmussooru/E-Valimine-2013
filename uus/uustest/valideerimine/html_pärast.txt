@@ -1,0 +1,20 @@
+ Error Line 6, Column 53: Bad value cache-control for attribute http-equiv on element meta.
+
+	<meta http-equiv="cache-control" content="public" />
+
+?
+Error Line 7, Column 70: Bad value expires for attribute http-equiv on element meta.
+
+	<meta http-equiv="expires" content="Mon, 22 Jul 2013 12:00:00 GMT" />
+
+?
+Error Line 48, Column 133: Attribute autologoutlink not allowed on element div at this point.
+
+…blish_stream" data-show-faces="false" data-width="200" data-max-rows="1"></div>
+
+Attributes for element div:
+    Global attributes
+
+Error Line 48, Column 133: Attribute scope not allowed on element div at this point.
+
+…blish_stream" data-show-faces="false" data-width="200" data-max-rows="1"></div>

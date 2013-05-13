@@ -15,6 +15,7 @@ js/kandidaadid.js
 js/messages.js
 js/navmenu.js
 js/statistika.js
+js/markerwithlabel.js
 data/otsi.json
 view/css/main.css
 view/css/messages.css

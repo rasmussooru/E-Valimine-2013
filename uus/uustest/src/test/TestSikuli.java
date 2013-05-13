@@ -1,4 +1,5 @@
-import org.sikuli.script.*;
+package test;
+
 
 import java.io.File;
 import java.io.IOException;
@@ -8,10 +9,14 @@ import java.util.logging.Logger;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.logging.impl.Log4JLogger;
 import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.*;
 import org.openqa.selenium.WebDriver;
 import org.python.antlr.ast.Assert;
+import org.sikuli.script.FindFailed;
+import org.sikuli.script.Screen;
+
 import java.util.logging.Logger;
 
 import java.text.SimpleDateFormat;
@@ -72,7 +77,7 @@ public class TestSikuli {
                 
         	//SIKULI
         	Screen s = new Screen();
-            WebDriver ff = new FirefoxDriver();
+        	WebDriver ff = new ChromeDriver();
 
             ff.get("https://e-valimine.appspot.com/");
             String title = ff.getTitle();

@@ -1,0 +1,16 @@
+16 	h1 	Parse Error = #3A75C4, offx = 2, offy = 2)
+27 	h2 	Parse Error = #3A75C4, offx = 2, offy = 2)
+62 		Parse Error }
+160 		Unknown pseudo-element or pseudo-class :required
+160 		Unknown pseudo-element or pseudo-class :required
+164 		Unknown pseudo-element or pseudo-class :required
+164 		Unknown pseudo-element or pseudo-class :valid
+164 		Unknown pseudo-element or pseudo-class :required
+164 		Unknown pseudo-element or pseudo-class :valid
+171 		Unknown pseudo-element or pseudo-class :invalid
+171 		Unknown pseudo-element or pseudo-class :invalid
+201 		Unknown pseudo-element or pseudo-class :required
+201 		Unknown pseudo-element or pseudo-class :valid
+205 		Unknown pseudo-element or pseudo-class :required
+205 		Unknown pseudo-element or pseudo-class :valid
+394 	.labels 	Value Error : font-style "bold" is not a font-style value : "bold" 

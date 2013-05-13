@@ -1,0 +1,126 @@
+Expected exactly one space between ')' and '{'.
+
+function showImage(){
+
+line 2 character 1
+Use spaces, not tabs.
+
+	var elem = document.getElementById('testimage');
+
+line 2 character 2
+Missing 'use strict' statement.
+
+	var elem = document.getElementById('testimage');
+
+line 2 character 13
+'document' was used before it was defined.
+
+	var elem = document.getElementById('testimage');
+
+line 3 character 1
+Use spaces, not tabs.
+
+	elem.style.display = 'block';
+
+line 3 character 2
+Expected 'elem' at column 5, not column 2.
+
+	elem.style.display = 'block';
+
+line 4 character 1
+Use spaces, not tabs.
+
+	setTimeout("hideImage()", 4000);
+
+line 4 character 2
+Expected 'setTimeout' at column 5, not column 2.
+
+	setTimeout("hideImage()", 4000);
+
+line 7 character 21
+Expected exactly one space between ')' and '{'.
+
+function hideImage(){
+
+line 8 character 1
+Use spaces, not tabs.
+
+	var elem = document.getElementById('testimage');
+
+line 8 character 2
+Missing 'use strict' statement.
+
+	var elem = document.getElementById('testimage');
+
+line 8 character 13
+'document' was used before it was defined.
+
+	var elem = document.getElementById('testimage');
+
+line 9 character 1
+Use spaces, not tabs.
+
+	elem.style.display = 'none';
+
+line 9 character 2
+Expected 'elem' at column 5, not column 2.
+
+	elem.style.display = 'none';
+
+line 13 character 1
+Use spaces, not tabs.
+
+	document.getElementById(id).style.display = 'block';
+
+line 13 character 2
+Missing 'use strict' statement.
+
+	document.getElementById(id).style.display = 'block';
+
+line 16 character 1
+Use spaces, not tabs.
+
+	document.getElementById(id).style.display = 'none';
+
+line 16 character 2
+Missing 'use strict' statement.
+
+	document.getElementById(id).style.display = 'none';
+
+line 20 character 1
+Use spaces, not tabs.
+
+	fillCandidates();
+
+line 20 character 2
+Missing 'use strict' statement.
+
+	fillCandidates();
+
+line 22 character 5
+'$' was used before it was defined.
+
+    $(".statFilter").unbind("change").change(function() {
+
+line 23 character 5
+Use spaces, not tabs.
+
+    	$("#kandidaadibox").empty();
+
+line 23 character 6
+Expected '$' at column 9, not column 6.
+
+    	$("#kandidaadibox").empty();
+
+line 24 character 5
+Use spaces, not tabs.
+
+    	
+
+line 24 character 5
+Unexpected character ' '.
+
+    	
+
+line 24 character 5
+Stopping. (4% scanned).

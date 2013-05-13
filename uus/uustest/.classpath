@@ -2,11 +2,15 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="com.google.appengine.eclipse.core.GAE_CONTAINER/App Engine (2)"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jre7"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/gson-2.2.2-javadoc.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/gson-2.2.2-sources.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/gson-2.2.2.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/json-rpc-1.0.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/mysql-connector-java-5.1.18-bin.jar"/>
+	<classpathentry kind="lib" path="C:/autotest_lib/autotest_lib/selenium-java-2.32.0.jar"/>
+	<classpathentry kind="lib" path="C:/autotest_lib/autotest_lib/selenium-java-2.32.0-srcs.jar"/>
+	<classpathentry kind="lib" path="C:/autotest_lib/autotest_lib/selenium-server-standalone-2.32.0.jar"/>
+	<classpathentry kind="lib" path="C:/autotest_lib/autotest_lib/sikuli-script.jar"/>
 	<classpathentry kind="output" path="war/WEB-INF/classes"/>
 </classpath>
